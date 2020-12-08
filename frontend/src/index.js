@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './assets/styles/index.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./assets/styles/tailwind.css";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import App from './App';
+import Events from './components/events.js'
+import Workshops from './components/workshops.js'
+import Team from './components/team.js'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Switch>
+    <Route path="/" exact component={App} />
+    <Route path="/events" exact component={Events} />
+    <Route path="/workshops" exact component={Workshops} />
+    <Route path="/team" exact component={Team} />
+
+    <Redirect from="*" to="/" />
+  </Switch>
+</BrowserRouter>,
   document.getElementById('root')
 );
 

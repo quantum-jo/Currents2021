@@ -70,30 +70,40 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                    <h6 className="text-xl font-semibold">Events</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
+                      BlaBlaBla.
                     </p>
                   </div>
+                  <div><Link to="/events">
+                  <button className="text-blue-500 bg-transparent border border-solid border-blue-500 font-bold text-sm px-6 py-3 rounded-full mr-1 mb-1" type="button">
+                  Know More &nbsp;
+                  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </button>
+                </Link>
+                </div>
                 </div>
               </div>
-
               <div className="w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                      <i className="fas fa-retweet"></i>
+                    <i class="fas fa-thumbtack"></i>                    
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
+                    <h6 className="text-xl font-semibold">Worskshops</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                      BlaBlaBla.
                     </p>
                   </div>
+                  <div><Link to="/workshops">
+                  <button className="text-blue-500 bg-transparent border border-solid border-blue-500 font-bold text-sm px-6 py-3 rounded-full mr-1 mb-1" type="button">
+                  Know More &nbsp;
+                  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </button>
+                </Link>
+                </div>
                 </div>
               </div>
-
               <div className="pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">

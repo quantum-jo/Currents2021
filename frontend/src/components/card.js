@@ -1,0 +1,29 @@
+import React, { Component } from 'react'
+import { Card, Icon } from 'semantic-ui-react'
+
+const extra = (
+  <a>
+    <Icon name='user' />
+    16 Friends
+  </a>
+)
+
+class card extends Component {
+  constructor(props) {
+      super(props);
+  }
+  render(){
+    const { title , description, meta , img } = this.props;
+    return(
+  <Card
+    image={img}
+    header= {title}
+    meta={meta}
+    description= {description}
+    extra={extra}
+  />
+    )
+}
+}
+
+export default card

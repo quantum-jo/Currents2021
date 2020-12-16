@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./assets/styles/tailwind.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import 'semantic-ui-css/semantic.min.css'
 import App from './App';
 import Events from './components/events.js'
 import Workshops from './components/workshops.js'

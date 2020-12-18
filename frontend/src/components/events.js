@@ -15,7 +15,7 @@ function events() {
   )) 
   return (
   <>
-    <Navbar/>
+    <Navbar path="events" />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div

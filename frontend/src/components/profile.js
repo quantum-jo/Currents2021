@@ -9,7 +9,6 @@ class profile extends Component {
       const { name } = this.props;
   return (
     <>
-      <Navbar path="/events"/>
       <main className="profile-page">
         <section className="relative block h-500-px">
           <div

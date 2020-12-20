@@ -1,6 +1,7 @@
 import {React,Component} from "react";
 import Navbar from "./Navbar.js";
 import Card from "./card.js";
+import bg from '../assets/img/pic.jpg'
 import Profile from "./profile.js";
 import { Grid } from 'semantic-ui-react'
 import _ from 'lodash'
@@ -12,13 +13,26 @@ const im = 'https://react.semantic-ui.com/images/avatar/large/daniel.jpg'
 class events extends Component {
   constructor(props) {
       super(props);
+      this.state = {
+        selectedEventTitle:"",
+        isSelected: false
+      };
+      this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange() {
+    this.setState({isSelected:true});
+    console.log(this.state.isSelected);
   }
   render(){
   const columns = _.times(10, (i) => (
     <Grid.Column key={i}>
-      <Card title={c} description={des} meta={m} img ={im} />
+      <Card title={c} description={des} meta={m} img ={im} 
+      onClick={() => {
+        this.handleChange();
+      }}/>
     </Grid.Column>
   )) 
+  const {selectedEventTitle, isSelected } = this.state;
   return (
   <>
     <Navbar path="events" />
@@ -26,10 +40,7 @@ class events extends Component {
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.pexels.com/photos/326461/pexels-photo-326461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
-            }}
+            style={{ backgroundImage: `url(${bg})`}}
           >
             <span
               id="blackOverlay"
@@ -72,6 +83,14 @@ class events extends Component {
             </svg>
           </div>
         </div>
+        { isSelected ? (
+          <section className="pb-20 bg-gray-300 -mt-24">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap"><Profile/> </div>
+            </div>
+        </section>
+      )
+      :(
         <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
@@ -81,6 +100,7 @@ class events extends Component {
             </div>
           </div>
         </section>
+      )}
           </main>
     </>
   );

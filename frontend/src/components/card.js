@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 
+
 const extra = (
   <a>
     <Icon name='user' />
@@ -13,7 +14,7 @@ class card extends Component {
       super(props);
   }
   render(){
-    const { title , description, meta , img } = this.props;
+    const { title , description, meta , img , onClick} = this.props;
     return(
   <Card fluid
   image={img}
@@ -21,6 +22,7 @@ class card extends Component {
     meta={meta}
     description= {description}
     extra={extra}
+    onClick={onClick}
   />
     )
 }

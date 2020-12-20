@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import Navbar from "./Navbar.js";
 import Footer from "./footer.js";
+import bg from '../assets/img/pic.jpg'
+
 
 export default function Landing() {
   return (
@@ -14,10 +16,7 @@ export default function Landing() {
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.pexels.com/photos/326461/pexels-photo-326461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
-            }}
+            style={{ backgroundImage: `url(${bg})`}}
           >
             <span
               id="blackOverlay"

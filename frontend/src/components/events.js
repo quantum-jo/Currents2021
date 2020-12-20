@@ -1,5 +1,7 @@
+import {React,Component} from "react";
 import Navbar from "./Navbar.js";
 import Card from "./card.js";
+import Profile from "./profile.js";
 import { Grid } from 'semantic-ui-react'
 import _ from 'lodash'
 const c="circuitrix"
@@ -7,7 +9,11 @@ const des="This is a great event"
 const m="Event"
 const im = 'https://react.semantic-ui.com/images/avatar/large/daniel.jpg'
 
-function events() {
+class events extends Component {
+  constructor(props) {
+      super(props);
+  }
+  render(){
   const columns = _.times(10, (i) => (
     <Grid.Column key={i}>
       <Card title={c} description={des} meta={m} img ={im} />
@@ -78,6 +84,7 @@ function events() {
           </main>
     </>
   );
+}
 }
 
 export default events;

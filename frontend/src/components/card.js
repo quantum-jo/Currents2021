@@ -15,8 +15,8 @@ class card extends Component {
   render(){
     const { title , description, meta , img } = this.props;
     return(
-  <Card
-    image={img}
+  <Card fluid
+  image={img}
     header= {title}
     meta={meta}
     description= {description}

@@ -6,7 +6,7 @@ class profile extends Component {
         super(props);
     }
     render(){
-      const { name } = this.props;
+      const { name ,onClick} = this.props;
   return (
     <>
       <main className="profile-page">
@@ -62,8 +62,9 @@ class profile extends Component {
                       <button
                         className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                         type="button"
+                        onClick={onClick}
                       >
-                        Connect
+                        Back
                       </button>
                     </div>
                   </div>
@@ -92,7 +93,7 @@ class profile extends Component {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
-                    Jenna Stones
+                    {name}
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}

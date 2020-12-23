@@ -4,6 +4,7 @@ import Card from "./card.js";
 import bg from '../assets/img/pic.jpg'
 import Profile from "./profile.js";
 import { Grid } from 'semantic-ui-react'
+import axios from 'axios';
 import _ from 'lodash'
 const c="circuitrix"
 const des="This is a great event"
@@ -15,14 +16,36 @@ class events extends Component {
       super(props);
       this.state = {
         selectedEventTitle:"",
+        eventDetails:"",
+        eventCount:"",
         isSelected: false
       };
       this.handleChange = this.handleChange.bind(this);
   }
+  getEventsData() {
+    axios
+        .get(`http://localhost:3001/events`, {})
+        .then(res => {
+            const data = res.data
+            console.log(data)
+            this.setState({
+              eventDetails:data,
+              eventCount:data.length
+            })
+            console.log(this.state.eventDetails)
+             
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+      }
   handleChange() {
-    this.setState({isSelected:true});
+    this.setState({isSelected:!this.state.isSelected});
     console.log(this.state.isSelected);
   }
+  componentWillMount(){
+    this.getEventsData();
+}
   render(){
   const columns = _.times(10, (i) => (
     <Grid.Column key={i}>
@@ -86,7 +109,9 @@ class events extends Component {
         { isSelected ? (
           <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap"><Profile/> </div>
+            <div className="flex flex-wrap"><Profile onClick={() => {
+        this.handleChange();
+      }} name={c}/> </div>
             </div>
         </section>
       )

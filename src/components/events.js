@@ -24,7 +24,7 @@ class events extends Component {
   }
   getEventsData() {
     axios
-        .get(`http://localhost:3001/events`, {})
+        .get(`https://currents-backend.herokuapp.com/events`, {})
         .then(res => {
             const data = res.data
             console.log(data)
@@ -43,7 +43,7 @@ class events extends Component {
     this.setState({isSelected:!this.state.isSelected});
     console.log(this.state.isSelected);
   }
-  componentWillMount(){
+  componentDidMount(){
     this.getEventsData();
 }
   render(){

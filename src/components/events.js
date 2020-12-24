@@ -6,11 +6,7 @@ import Profile from "./profile.js";
 import { Grid } from 'semantic-ui-react'
 import axios from 'axios';
 import _ from 'lodash'
-const c="circuitrix"
-const des="This is a great event"
 const m="Event"
-const im = 'https://react.semantic-ui.com/images/avatar/large/daniel.jpg'
-
 class events extends Component {
   constructor(props) {
       super(props);
@@ -20,42 +16,35 @@ class events extends Component {
         eventCount:"",
         isSelected: false
       };
-      this.handleChange = this.handleChange.bind(this);
-  }
+      }
   getEventsData() {
     axios
         .get(`https://currents-backend.herokuapp.com/events`, {})
         .then(res => {
             const data = res.data
-            console.log(data)
             this.setState({
               eventDetails:data,
               eventCount:data.length
             })
-            console.log(this.state.eventDetails)
-             
         })
         .catch((error) => {
             console.log(error)
         })
       }
-  handleChange() {
-    this.setState({isSelected:!this.state.isSelected});
-    console.log(this.state.isSelected);
-  }
   componentDidMount(){
     this.getEventsData();
 }
   render(){
-  const columns = _.times(10, (i) => (
+    const {selectedEventTitle, isSelected , eventDetails , eventCount} = this.state;
+  const columns = _.times(eventCount, (i) => (
     <Grid.Column key={i}>
-      <Card title={c} description={des} meta={m} img ={im} 
+      <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta={m} img ={eventDetails[i].img} 
       onClick={() => {
-        this.handleChange();
+        this.setState({isSelected:!this.state.isSelected});
+        this.setState({selectedEventTitle: this.state.eventDetails[i].title});
       }}/>
     </Grid.Column>
   )) 
-  const {selectedEventTitle, isSelected } = this.state;
   return (
   <>
     <Navbar path="events" />
@@ -109,17 +98,16 @@ class events extends Component {
         { isSelected ? (
           <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap"><Profile onClick={() => {
-        this.handleChange();
-      }} name={c}/> </div>
-            </div>
+              <Profile onClick={() => {
+        this.setState({isSelected:!this.state.isSelected});
+      }} name={selectedEventTitle}/> </div>
         </section>
       )
       :(
         <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
-            <Grid stackable columns={3}>
+            <Grid stackable centered columns="3">
     {columns}
   </Grid>
             </div>

@@ -1,9 +1,10 @@
 import {React,Component} from "react";
 import Navbar from "./Navbar.js";
+import Footer from "./footer.js";
 import Card from "./card.js";
-import bg from '../assets/img/pic.jpg'
+import bg from  '../assets/img/pic.jpg'
 import Profile from "./profile.js";
-import { Grid } from 'semantic-ui-react'
+import { Grid ,Dimmer, Loader } from 'semantic-ui-react'
 import axios from 'axios';
 import _ from 'lodash'
 const m="Event"
@@ -14,7 +15,8 @@ class events extends Component {
         selectedEventTitle:"",
         eventDetails:"",
         eventCount:"",
-        isSelected: false
+        isSelected: false,
+        isLoading:true
       };
       }
   getEventsData() {
@@ -35,10 +37,11 @@ class events extends Component {
     this.getEventsData();
 }
   render(){
-    const {selectedEventTitle, isSelected , eventDetails , eventCount} = this.state;
+    const {selectedEventTitle, isSelected , eventDetails , eventCount ,isLoading} = this.state;
   const columns = _.times(eventCount, (i) => (
     <Grid.Column key={i}>
-      <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta={m} img ={eventDetails[i].img} 
+      <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta={m} 
+      img ={eventDetails[i].img} date={eventDetails[i].date}
       onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
         this.setState({selectedEventTitle: this.state.eventDetails[i].title});
@@ -107,13 +110,14 @@ class events extends Component {
         <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
-            <Grid stackable centered columns="3">
+             <Grid stackable centered columns="3">
     {columns}
   </Grid>
             </div>
           </div>
         </section>
       )}
+      <Footer/>
           </main>
     </>
   );

@@ -2,7 +2,6 @@ import {React,Component} from "react";
 import Navbar from "./Navbar.js";
 import Footer from "./footer.js";
 import Card from "./card.js";
-import bg from  '../assets/img/pic.jpg'
 import Profile from "./profile.js";
 import { Grid ,Dimmer, Loader } from 'semantic-ui-react'
 import axios from 'axios';
@@ -55,7 +54,7 @@ class events extends Component {
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{ backgroundImage: `url(${bg})`}}
+            style={{ backgroundImage: `url('/assets/img/pic.jpg')`}}
           >
             <span
               id="blackOverlay"

@@ -19,6 +19,7 @@
     "react-google-maps": "9.4.5",
     "react-image-magnifiers": "^1.4.0",
     "react-particles-js": "^3.4.1",
+    "react-photo-gallery": "^8.0.0",
     "react-router": "5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",

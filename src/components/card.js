@@ -7,18 +7,20 @@ class card extends Component {
   }
   render(){
     const { title , prize, description, meta , img ,date, onClick} = this.props;
-    console.log(img);
     const extra = meta=='Event'?
     (
       <a>
         <Icon name='calendar'/>
         Date: {date} <br/>
-        <Icon name='trophy'/>
+        <Icon name='rupee sign'/>
          Prizes Worth INR {prize}
       </a>
     ) : ( <a>
       <Icon name='calendar'/>
-        Date: {date}
+        Date: {date} <br/>
+        <Icon name='user'/>
+         Team of {prize}
+
     </a>)
     return(
   <Card fluid

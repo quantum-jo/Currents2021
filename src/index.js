@@ -10,7 +10,7 @@ import App from './App';
 import Events from './components/events.js'
 import Workshops from './components/workshops.js'
 import Team from './components/team.js'
-import Gallery from './components/gallery';
+import Gallery from './components/gallery.js';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,6 +20,7 @@ ReactDOM.render(
     <Route path="/workshops" exact component={Workshops} />
     <Route path="/team" exact component={Team} />
     <Route path="/gallery" exact component={Gallery} />
+    <Route path="/tronicals" exact component={Gallery}/>
 
     <Redirect from="*" to="/" />
   </Switch>

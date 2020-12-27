@@ -4,6 +4,7 @@ import Footer from "./footer.js";
 import Card from "./card.js";
 import Profile from "./profile.js";
 import { Grid ,Dimmer, Loader } from 'semantic-ui-react'
+import FadeIn from 'react-fade-in';
 import axios from 'axios';
 import _ from 'lodash'
 const m="Event"
@@ -39,12 +40,14 @@ class events extends Component {
     const {selectedEventTitle, isSelected , eventDetails , eventCount ,isLoading} = this.state;
   const columns = _.times(eventCount, (i) => (
     <Grid.Column key={i}>
+      <FadeIn delay ="500" transitionDuration="1000">
       <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta={m} 
       img ={eventDetails[i].img} date={eventDetails[i].date}
       onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
         this.setState({selectedEventTitle: this.state.eventDetails[i].title});
       }}/>
+      </FadeIn>
     </Grid.Column>
   )) 
   return (
@@ -77,40 +80,24 @@ class events extends Component {
               </div>
             </div>
           </div>
-          <div
-            className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-            style={{ transform: "translateZ(0)" }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-gray-300 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
-          </div>
         </div>
         { isSelected ? (
           <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
+            <FadeIn delay="1000" transitionDuration="1000">
               <Profile onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
-      }} name={selectedEventTitle}/> </div>
+      }} name={selectedEventTitle} meta={m}/> 
+      </FadeIn></div>
         </section>
       )
       :(
         <section className="pb-20 bg-gray-300 -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
+            
              <Grid stackable centered columns="3">
-    {columns}
+               {columns}
   </Grid>
             </div>
           </div>

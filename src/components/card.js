@@ -7,7 +7,7 @@ class card extends Component {
   }
   render(){
     const { title , prize, description, meta , img ,date, onClick} = this.props;
-    console.log(img)
+    console.log(img);
     const extra = meta=='Event'?
     (
       <a>

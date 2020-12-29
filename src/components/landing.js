@@ -2,7 +2,6 @@ import React from "react";
 import Particles from "react-particles-js";
 import { Link } from "react-router-dom";
 
-// components
 
 import Navbar from "./Navbar.js";
 import Footer from "./footer.js";
@@ -10,9 +9,9 @@ import Footer from "./footer.js";
 
 export default function Landing() {
   return (
-    <>
-        <div className="bg-black ">
-         <Navbar/>
+    <> <Navbar/>
+	<div style={{position: 'relative'}}>
+        <div className="bg-gray-800" style={{position: 'absolute', zIndex:-1}}>
          <Particles
          height="100vh"
          width="100vw"
@@ -66,9 +65,9 @@ export default function Landing() {
 	        }
 	    },
 	    "retina_detect": true
-	}} /><Footer/>
+	}}/>
         </div>
-        
+		</div>
     </>
   );
 }

@@ -19,25 +19,33 @@ import axios from 'axios';
 
 class GallerySet extends Component {
     state = { 
-        photos: []
+        photos: [],
      }
 
     getPhotos = async () => {
+        let temp = [];
         try {
-            let photosList =  (await axios.get(`https://currents-backend.herokuapp.com/gallery`, {})).data;
+            let photosList = (await axios.get(`https://currents-backend.herokuapp.com/gallery`, {})).data;
             let i = 0;
             photosList.forEach(photo => {
                 const { src, width, height } = photo;
-                this.state.photos.push({ src, width, height, key: i });
+                let j = i.toString();
+                temp.push({ src, width, height, key: j });
                 i++;
             });
-        } catch (err) {
+        } catch(err) {
             console.log(err);
         }
+        this.setState({
+                photos: temp
+            });
+    }
+
+    componentDidMount = () => {
+        this.getPhotos();
     }
 
     render() { 
-        this.getPhotos();
         return ( 
             <div style={{ background: '#000', padding: 0 }}>
             <Navbar />

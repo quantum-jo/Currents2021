@@ -11,6 +11,8 @@ import Events from './components/events.js'
 import Workshops from './components/workshops.js'
 import Team from './components/team.js'
 import Gallery from './components/gallery.js';
+import Tronicals from './components/tronicals.js';
+import SR from './components/sr.js';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,7 +22,8 @@ ReactDOM.render(
     <Route path="/workshops" exact component={Workshops} />
     <Route path="/team" exact component={Team} />
     <Route path="/gallery" exact component={Gallery} />
-    <Route path="/tronicals" exact component={Gallery}/>
+    <Route path="/tronicals" exact component={Tronicals}/>
+    <Route path="/sr" exact component={SR}/>
 
     <Redirect from="*" to="/" />
   </Switch>

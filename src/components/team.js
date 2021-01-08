@@ -9,8 +9,12 @@ import FadeIn from 'react-fade-in';
 
 class Team extends Component {
   state = { 
+<<<<<<< HEAD
     membersData : [],
     memCount:0
+=======
+    membersData: []
+>>>>>>> 07af9b772e4ab805a9a2255745b4327df01d08b5
    }
   
   getTeamData = async () => {

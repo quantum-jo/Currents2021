@@ -1,0 +1,59 @@
+{
+  "name": "currents",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.14.0",
+    "@popperjs/core": "^2.5.4",
+    "@tailwindcss/custom-forms": "0.2.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.1",
+    "chart.js": "2.9.3",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
+    "mdbreact": "^5.0.1",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-fade-in": "^1.1.1",
+    "react-google-maps": "9.4.5",
+    "react-image-magnifiers": "^1.4.0",
+    "react-medium-image-zoom": "^4.3.1",
+    "react-particles-js": "^3.4.1",
+    "react-photo-gallery": "^8.0.0",
+    "react-router": "5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "react-typist": "^2.0.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.1",
+    "tailwindcss": "1.8.10",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

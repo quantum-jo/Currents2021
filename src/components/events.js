@@ -49,7 +49,8 @@ class events extends Component {
       }}/>
       </FadeIn>
     </Grid.Column>
-  )) 
+  ))
+  console.log(columns) 
   return (
   <>
     <Navbar path="events" />

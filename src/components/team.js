@@ -15,7 +15,7 @@ class Team extends Component {
   getTeamData = async () => {
     let data = [];
     try {
-      data = (await axios.get(`https://currents-backend.herokuapp.com/team`, {})).data;
+      data = (await axios.get(`https://currentsbackend.herokuapp.com/team`, {})).data;
     } catch(err) {
       console.log(err);
     }
@@ -23,6 +23,7 @@ class Team extends Component {
     this.setState({
         membersData: data
     });
+
   }
 
   componentDidMount = () => {
@@ -30,8 +31,7 @@ class Team extends Component {
   }
 
   render() { 
-
-    const columns = _.times(this.state.membersData.length, (i) => {
+    const columns = _.times(this.state.membersData.length, (i) => (
       <Grid.Column key={ i } >
         <FadeIn delay="500" transitionDuration="1000">
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
@@ -49,7 +49,7 @@ class Team extends Component {
           </MDBCol>
         </FadeIn>
       </Grid.Column>
-    });
+    ));
 
 
     return ( 

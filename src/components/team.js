@@ -15,7 +15,7 @@ class Team extends Component {
   getTeamData = async () => {
     let data = [];
     try {
-      data = (await axios.get(`https://currentsbackend.herokuapp.com/team`, {})).data;
+      data = (await axios.get(`https://currents-backend.herokuapp.com/team`, {})).data;
     } catch(err) {
       console.log(err);
     }

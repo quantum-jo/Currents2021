@@ -9,12 +9,8 @@ import FadeIn from 'react-fade-in';
 
 class Team extends Component {
   state = { 
-<<<<<<< HEAD
-    membersData : [],
+    membersData: [],
     memCount:0
-=======
-    membersData: []
->>>>>>> 07af9b772e4ab805a9a2255745b4327df01d08b5
    }
   
   getTeamData = async () => {
@@ -58,7 +54,7 @@ class Team extends Component {
     ));
     return ( 
       <div style={{ background: '#000', padding: 0 }}>
-        <Navbar path='team' />
+        <Navbar path='team'/>
         <div style={{ padding: 100, color: 'white', textAlign: 'center' }}>
           <h2 className="h1-responsive font-weight-bold my-5">
               Our amazing team

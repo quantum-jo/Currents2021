@@ -33,11 +33,11 @@ class events extends Component {
             console.log(error)
         })
       }
-  componentDidMount(){
+  componentDidMount() {
     this.getEventsData();
 }
   render(){
-    const {selectedEventTitle, isSelected , eventDetails , eventCount ,isLoading} = this.state;
+    const {selectedEventTitle,isSelected,eventDetails,eventCount} = this.state;
   const columns = _.times(eventCount, (i) => (
     <Grid.Column key={i}>
       <FadeIn delay ="500" transitionDuration="1000">
@@ -50,7 +50,6 @@ class events extends Component {
       </FadeIn>
     </Grid.Column>
   ))
-  console.log(columns) 
   return (
   <>
     <Navbar path="events" />

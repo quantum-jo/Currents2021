@@ -22,9 +22,9 @@ class Team extends Component {
     }
 
     this.setState({
-        membersData: data,
-        memCount:data.length
+        membersData: data
     });
+
   }
 
   componentDidMount = () => {
@@ -32,8 +32,7 @@ class Team extends Component {
   }
 
   render() { 
-         const {membersData,memCount} = this.state;
-    const columns = _.times(memCount, (i) => (
+    const columns = _.times(this.state.membersData.length, (i) => (
       <Grid.Column key={ i } >
         <FadeIn delay="500" transitionDuration="1000">
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">

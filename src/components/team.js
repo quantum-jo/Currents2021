@@ -9,7 +9,8 @@ import FadeIn from 'react-fade-in';
 
 class Team extends Component {
   state = { 
-    membersData: []
+    membersData: [],
+    memCount:0
    }
   
   getTeamData = async () => {
@@ -35,14 +36,14 @@ class Team extends Component {
       <Grid.Column key={ i } >
         <FadeIn delay="500" transitionDuration="1000">
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
-            <Image src={ this.state.membersData[i].image } circular size="small" />
-            <h5 className="font-weight-bold mt-4 mb-3">{ this.state.membersData[i].name }</h5>
-            <p className="text-uppercase blue-text">{ this.state.membersData[i].position }</p>
+            <Image src={ membersData[i].image } circular size="small" />
+            <h5 className="font-weight-bold mt-4 mb-3">{ membersData[i].name }</h5>
+            <p className="text-uppercase blue-text">{ membersData[i].position }</p>
             <ul className="list-unstyled mb-0">
-              <a href={ this.state.membersData[i].facebook } className="p-2 fa-lg">
+              <a href={ membersData[i].facebook } className="p-2 fa-lg">
                 <MDBIcon fab icon="facebook-f" className="blue-text" />
               </a>
-              <a href={ this.state.membersData[i].instagram } className="p-2 fa-lg">
+              <a href={ membersData[i].instagram } className="p-2 fa-lg">
                 <MDBIcon fab icon="instagram" className="blue-text" />
               </a>
             </ul>
@@ -50,11 +51,9 @@ class Team extends Component {
         </FadeIn>
       </Grid.Column>
     ));
-
-
     return ( 
       <div style={{ background: '#000', padding: 0 }}>
-        <Navbar path='team' />
+        <Navbar path='team'/>
         <div style={{ padding: 100, color: 'white', textAlign: 'center' }}>
           <h2 className="h1-responsive font-weight-bold my-5">
               Our amazing team

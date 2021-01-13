@@ -3,6 +3,7 @@ import Gallery from 'react-photo-gallery';
 import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
+import FadeIn from 'react-fade-in';
 
 // const testPhotos = [
 //     {
@@ -50,7 +51,9 @@ class GallerySet extends Component {
             <div style={{ background: '#000', padding: 0 }}>
             <Navbar />
             <div style={{ padding: 100, color: 'white', textAlign: 'center' }}>
+            <FadeIn delay ="500" transitionDuration="1000">
                 <h1>Gallery</h1>
+                </FadeIn>
                 <hr style={{ padding: 10 }} />
                 <Gallery photos={this.state.photos} />
             </div>

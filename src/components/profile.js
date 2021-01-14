@@ -106,7 +106,7 @@ class profile extends Component {
                       >
                         Register
                       </button>
-                      <a href={eventDetails.img} download> 
+                      <a href={eventDetails.rule_link} download> 
                       <button
                         className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                         type="button"
@@ -159,7 +159,7 @@ class profile extends Component {
                       <Zoom>
                         <img
                           alt="that wanaka tree"
-                          src={eventDetails.img}
+                          src={eventDetails.poster}
                           width="500"
                         />
                       </Zoom>

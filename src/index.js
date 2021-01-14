@@ -11,7 +11,7 @@ import Events from './components/events.js'
 import Workshops from './components/workshops.js'
 import Team from './components/team.js'
 import Gallery from './components/gallery.js';
-import Tronicals from './components/Tronicals/tronicals.js';
+import Tronicals from './components/tronicals.js';
 
 ReactDOM.render(
   <BrowserRouter>

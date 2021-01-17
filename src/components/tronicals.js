@@ -35,7 +35,7 @@ class Tronicals extends Component {
       const Items=[]
       _.times(tronicalDetails.length, (i) => (
         Items.push({
-          title: (tronicalDetails[i].volume_no),
+          title: "Volume "+tronicalDetails[i].volume_no,
           getContent: () => (<Grid centered stackable columns={4}>
             <Grid.Column>
        <div class="ui card">

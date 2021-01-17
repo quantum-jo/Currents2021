@@ -89,7 +89,7 @@ class Tronicals extends Component {
       ;
         return (  
             <>
-                <div style={{ background: '#000', padding: 0 }}>
+                <div style={{ background: '#49617D', padding: 0 }}>
         <Navbar path='tronicals'/>
         <div style={{ paddingLeft: "5%",paddingRight: "5%", paddingTop: "10%",paddingBottom: "10%",textAlign: 'center' }}>
           <h2 className="h1-responsive text-white font-weight-bold my-5">

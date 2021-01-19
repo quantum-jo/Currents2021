@@ -6,6 +6,7 @@ import Profile from "./profile.js";
 import { Grid ,Dimmer, Loader } from 'semantic-ui-react'
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
+import SideDiv from './sideDiv';
 import _ from 'lodash'
 const m="Event"
 class events extends Component {
@@ -53,6 +54,7 @@ class events extends Component {
   return (
   <>
     <Navbar path="events" />
+    <SideDiv />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div

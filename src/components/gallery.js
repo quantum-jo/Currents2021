@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
+import SideDiv from './sideDiv';
 
 // const testPhotos = [
 //     {
@@ -48,9 +49,10 @@ class GallerySet extends Component {
 
     render() { 
         return ( 
-            <div style={{ background: '#49617D', padding: 0 }}>
+            <div style={{ background: '#000', padding: 0 }}>
             <Navbar />
-            <div style={{ padding: 100, color: 'white', textAlign: 'center' }}>
+            <SideDiv />
+            <div style={{ padding: 100, color: '#E18137', textAlign: 'center' }}>
             <FadeIn delay ="500" transitionDuration="1000">
                 <h1>Gallery</h1>
                 </FadeIn>

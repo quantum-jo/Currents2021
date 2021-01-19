@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import { Form, Input, Button, Popup, Segment } from 'semantic-ui-react';
+import SideDiv from './sideDiv';
 
 class Certificate extends Component {
     state = { 
@@ -42,8 +43,9 @@ class Certificate extends Component {
     render() { 
         let { value, name, college, certificateType, position, statusCode, msg } = this.state;
         return ( 
-            <div style={{ padding: 0, background: '#49617D' }}>
+            <div style={{ padding: 0, background: '#000' }}>
                 <Navbar path='certificate' />
+                <SideDiv />
                 <div>
                    { (statusCode === 0 || statusCode === 200) && <Form style={{ padding: '13%', paddingBottom: '0.5%' }}>
                                                 <Form.Group widths="equal">

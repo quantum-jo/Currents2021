@@ -3,10 +3,9 @@ import Navbar from "./Navbar.js";
 import Footer from "./footer.js";
 import Card from "./card.js";
 import Profile from "./profile.js";
-import { Grid ,Dimmer, Loader } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
-import SideDiv from './sideDiv';
 import _ from 'lodash'
 const m="Workshop"
 class workshops extends Component {
@@ -54,7 +53,6 @@ class workshops extends Component {
   return (
   <>
     <Navbar path="workshops" />
-    <SideDiv />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
@@ -84,7 +82,7 @@ class workshops extends Component {
           </div>
         </div>
         { isSelected ? (
-          <section className="pb-20 bg-gray-300 -mt-24">
+          <section className="pb-20 bg-black -mt-24">
           <div className="container mx-auto px-4">
             <FadeIn delay="1000" transitionDuration="1000">
               <Profile onClick={() => {
@@ -93,7 +91,7 @@ class workshops extends Component {
         </section>
       )
       :(
-        <section className="pb-20 bg-gray-300 -mt-24">
+        <section className="pb-20 bg-black -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
              <Grid stackable centered columns="3">

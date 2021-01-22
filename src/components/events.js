@@ -54,7 +54,6 @@ class events extends Component {
   return (
   <>
     <Navbar path="events" />
-    <SideDiv />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
@@ -84,7 +83,11 @@ class events extends Component {
           </div>
         </div>
         { isSelected ? (
-          <section className="pb-20 bg-gray-300 -mt-24">
+          <div
+          className="bg-center bg-cover"
+          style={{ backgroundImage: `url('/assets/img/background.png')`}}
+        >
+          <section className="pb-20 -mt-24">
           <div className="container mx-auto px-4">
             <FadeIn delay="1000" transitionDuration="1000">
               <Profile onClick={() => {
@@ -92,9 +95,10 @@ class events extends Component {
       }} name={selectedEventTitle} meta={m}/> 
       </FadeIn></div>
         </section>
+        </div>
       )
       :(
-        <section className="pb-20 bg-gray-300 -mt-24">
+        <section className="pb-20 bg-black -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
             

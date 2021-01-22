@@ -63,29 +63,10 @@ class profile extends Component {
               className="w-full h-full absolute opacity-50 bg-black"
             ></span>
           </div>
-          <div
-            className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-            style={{ transform: "translateZ(0)" }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-gray-300 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
-          </div>
         </section>
-        <section className="relative py-16 bg-gray-300">
+        <section className="relative py-16 bg-gray-800">
           <div className="container mx-auto px-4">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+            <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-6 shadow-xl rounded-lg -mt-64">
               <div className="px-6">
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
@@ -127,14 +108,14 @@ class profile extends Component {
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                       <div className="mr-4 p-3 text-center">
                         <span className="text-sm text-gray-500"> {meta==='Event'? (<p>Prizes Worth INR</p>):(<p>Registration Fee INR</p>)} </span>
-                        <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
+                        <span className="text-xl font-bold block uppercase tracking-wide text-white">
                         <Icon name='rupee sign'/>
                           {extra}
                         </span>
                       </div>
                       <div className="lg:mr-4 p-3 text-center">
                       <span className="text-sm text-gray-500">Date</span>
-                        <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
+                        <span className="text-xl font-bold block uppercase tracking-wide text-white">
                         {eventDetails.date}
                         </span>
                       </div>
@@ -142,7 +123,7 @@ class profile extends Component {
                   </div>
                 </div>
                 <div className="text-center mt-12">
-                  <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
+                  <h3 className="text-4xl font-semibold leading-normal mb-2 text-white mb-2">
                     {name}
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
@@ -152,7 +133,7 @@ class profile extends Component {
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-lg leading-relaxed text-gray-800">
+                      <p className="mb-4 text-lg leading-relaxed text-white">
                        {eventDetails.long_desc}
                       </p>
                       <div>

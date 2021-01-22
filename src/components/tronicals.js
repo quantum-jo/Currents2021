@@ -39,17 +39,17 @@ class Tronicals extends Component {
           title: "Volume "+tronicalDetails[i].volume_no,
           getContent: () => (<Grid centered stackable columns={4}>
             <Grid.Column>
-       <div class="ui card">
+       <div class="ui card" style={{background:'black'}}>
        <div>
          <img src={tronicalDetails[i].issue_1_img} class="visible content"/>
        </div>
-       <div class="content">
-         <a class="header">Volume {tronicalDetails[i].volume_no}</a>
-         <div class="meta">
+       <div class="content" style={{color:'white'}}>
+         <a class="header" style={{color:'white'}}>Volume {tronicalDetails[i].volume_no}</a>
+         <div class="meta" style={{color:'white'}}>
            <span class="date">Issue I</span>
          </div>
        </div>
-       <div class="extra content">
+       <div class="extra content" style={{color:'white'}}>
        <a href={tronicalDetails[i].issue_1_file} download> 
                       <button
                         className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
@@ -62,17 +62,17 @@ class Tronicals extends Component {
      </div>
      </Grid.Column>
      <Grid.Column>
-     <div class="ui card">
+     <div class="ui card" style={{background:'black'}}>
        <div>
          <img src={tronicalDetails[i].issue_1_img} class="visible content"/>
        </div>
-       <div class="content">
-         <a class="header">Volume {tronicalDetails[i].volume_no}</a>
-         <div class="meta">
+       <div class="content" style={{color:'white'}}>
+         <a class="header" style={{color:'white'}}>Volume {tronicalDetails[i].volume_no}</a>
+         <div class="meta" style={{color:'white'}}>
            <span class="date">Issue II</span>
          </div>
        </div>
-       <div class="extra content">
+       <div class="extra content" style={{color:'white'}}>
        <a href={tronicalDetails[i].issue_2_file} download> 
                       <button
                         className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"

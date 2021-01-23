@@ -6,7 +6,21 @@ import { MDBCol, MDBIcon } from "mdbreact";
 import axios from 'axios';
 import _ from 'lodash';
 import FadeIn from 'react-fade-in';
-import SideDiv from './sideDiv';
+
+const makeStyle = {
+  containerDiv: {
+    padding: 0,
+    background: '#000'
+  },
+  wrapperDiv: {
+    padding: 100, 
+    color: '#fff', 
+    textAlign: 'center', 
+    position: 'relative', 
+    filter: 'drop-shadow(10px 10px 150px #EB965E) drop-shadow(-10px -10px 50px #EB965E)'
+  }
+};
+
 
 class Team extends Component {
   state = { 
@@ -53,10 +67,10 @@ class Team extends Component {
       </Grid.Column>
     ));
     return ( 
-      <div style={{ padding: 0, background: '#000' }}>
+      <div style={ makeStyle.containerDiv }>
         <Navbar path='team'/>
-        <SideDiv />
-        <div style={{ padding: 100, color: '#54E137', textAlign: 'center', position: 'relative' }}>
+        
+        <div style={ makeStyle.wrapperDiv }>
           <h2 className="h1-responsive font-weight-bold my-5">
               Our amazing team
           </h2>

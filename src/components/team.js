@@ -17,7 +17,7 @@ const makeStyle = {
     color: '#fff', 
     textAlign: 'center', 
     position: 'relative', 
-    filter: 'drop-shadow(10px 10px 150px #EB965E) drop-shadow(-10px -10px 50px #EB965E)'
+    filter: 'drop-shadow(10px 10px 100px #EB965E) drop-shadow(-10px -10px 50px #EB965E)'
   }
 };
 

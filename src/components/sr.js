@@ -17,7 +17,7 @@ const makeStyle = {
         overflow: 'auto',
         background: 'hsl(210, 50%, 14%)',
         borderRadius: '10px',
-        filter: 'drop-shadow(10px 10px 20px #ff00ff) drop-shadow(-10px -10px 50px #ff00ff)'
+        filter: 'drop-shadow(5px 5px 10px #ff00ff) drop-shadow(-5px -5px 10px #ff00ff)'
     },
     Img: {
         float: 'left',

@@ -4,69 +4,13 @@ import { Link } from "react-router-dom";
 
 
 import Navbar from "./Navbar.js";
-import Footer from "./footer.js";
+
 
 
 export default function Landing() {
   return (
     <> <Navbar/>
-	<div style={{position: 'relative'}}>
-        <div className="bg-gray-800" style={{position: 'absolute', zIndex:-1}}>
-         <Particles
-         height="100vh"
-         width="100vw"
-    params={{
-	    "particles": {
-	        "number": {
-	            "value": 10,
-	            "density": {
-	                "enable": true,
-	                "value_area": 150
-	            }
-	        },
-	        "line_linked": {
-	            "enable": false
-	        },
-	        "move": {
-	            "speed": 4,
-	            "out_mode": "out"
-	        },
-	        "shape": {
-	            "type": [
-	                "image",
-	            ],
-	            "image": [
-	                {
-	                    "src": "https://www.flaticon.com/svg/static/icons/svg/1482/1482822.svg",
-	                    "height": 20,
-	                    "width": 23
-                    },
-                    {
-	                    "src": "https://images.vexels.com/media/users/3/204836/isolated/preview/d93b1e2ddc3de434131669fc9f33a386-lightbulb-stroke-color-by-vexels.png",
-	                    "height": 20,
-	                    "width": 23
-                    },
-                    {
-	                    "src": "https://cdn3.iconfinder.com/data/icons/circuit-and-pipe/128/CircuitPipe-05-512.png",
-	                    "height": 20,
-	                    "width": 23
-	                },
-	            ]
-	        },
-	        "size": {
-	            "value": 40,
-	            "random": false,
-	            "anim": {
-	                "enable": true,
-	                "speed": 4,
-	                "size_min": 10,
-	                "sync": false
-	            }
-	        }
-	    },
-	    "retina_detect": true
-	}}/>
-        </div>
+	<div style={{ position:'fixed',padding:0,margin:0,top:0,left:0,width: '100%',height: '100%',background:'url(/assets/img/background.png)'}}>
 		</div>
     </>
   );

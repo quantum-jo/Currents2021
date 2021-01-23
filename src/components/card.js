@@ -25,7 +25,7 @@ class card extends Component {
 
     </a>)
     return(
-      <Card style={{'box-shadow':'20px 20px 4px -8px rgba(235,21,235,0.73)', 'outline': '3px solid rgba(235,21,235,1)'}} onClick={onClick} >
+      <Card style={{'box-shadow':'rgb(0,0,0) 10px -10px 0px -3px, rgb(255,20,147) 10px -10px','outline': 'rgb(255,20,147) solid 2px'}} onClick={onClick} >
       <Image src={img} />
       <Card.Content style={{background:'black'}}>
         <Card.Header style={{color:'white'}}>{title}</Card.Header>

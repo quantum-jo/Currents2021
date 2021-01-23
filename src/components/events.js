@@ -84,8 +84,7 @@ class events extends Component {
         </div>
         { isSelected ? (
           <div
-          className="bg-center bg-cover"
-          style={{ backgroundImage: `url('/assets/img/background.png')`}}
+          className="bg-center bg-black bg-cover"
         >
           <section className="pb-20 -mt-24">
           <div className="container mx-auto px-4">

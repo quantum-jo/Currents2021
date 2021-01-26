@@ -8,7 +8,7 @@ const makeStyle = {
     containerDiv: {
         padding: '10%',
         color: 'coral',
-        background: 'hsl(210, 50%, 14%)'
+        background: 'hsl(210, 50%, 14%)' // hsl(210, 50%, 14%)
     },
     contentSection: {
         margin: '5%',
@@ -22,8 +22,8 @@ const makeStyle = {
     Img: {
         float: 'left',
         height: 'auto',
-        boxShadow:'rgb(0,0,0) 10px -10px 0px -3px, rgb(255,20,147) 10px -10px', 
-        outline: 'rgb(255,20,147) solid 2px'
+        boxShadow:'rgb(0,0,0) 10px -10px 0px -3px, #33FF00 10px -10px', 
+        outline: '#E6FB04 solid 2px'
     },
     lines: {
         background: '#9DDF27'

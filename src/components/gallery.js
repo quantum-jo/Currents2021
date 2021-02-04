@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Gallery from 'react-photo-gallery';
+import ResponsiveGallery from 'react-responsive-gallery';
 import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
@@ -30,9 +31,9 @@ class GallerySet extends Component {
             let photosList = (await axios.get(`https://currents-backend.herokuapp.com/gallery`, {})).data;
             let i = 0;
             photosList.forEach(photo => {
-                const { src, width, height } = photo;
+                const { src, lightboxTitle } = photo;
                 let j = i.toString();
-                temp.push({ src, width, height, key: j });
+                temp.push({ src,lightboxTitle, key: j });
                 i++;
             });
         } catch(err) {
@@ -41,6 +42,7 @@ class GallerySet extends Component {
         this.setState({
                 photos: temp
             });
+            console.log(this.state.photos)
     }
 
     componentDidMount = () => {
@@ -57,7 +59,7 @@ class GallerySet extends Component {
                 <h1>Gallery</h1>
                 </FadeIn>
                 <hr style={{ padding: 10 }} />
-                <Gallery photos={this.state.photos} />
+                <ResponsiveGallery images={this.state.photos} useLightBox='true'  />
             </div>
             <Footer />
             </div>

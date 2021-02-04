@@ -92,15 +92,20 @@ class Tronicals extends Component {
       ;
         return (  
             <>
-                <div style={{ background: '#000', padding: 0 }}>
+                <div style={{backgroundImage: `url('/assets/img/Plain bg website.png')`,backgroundSize: 'contain', padding: 0 }}>
         <Navbar path='tronicals'/>
-        <SideDiv />
+        
         <div style={{ paddingLeft: "5%",paddingRight: "5%", paddingTop: "10%",paddingBottom: "10%",textAlign: 'center' }}>
           <h2 className="h1-responsive text-white font-weight-bold my-5">
               Tronicals
           </h2>
-          <p className="text-white w-responsive mx-auto mb-5">
-            Be in touch with the latest trends in EEE
+          <p className="text-xl	text-white w-responsive mx-auto mb-5">
+          Tronicals is the biannual technical magazine of the Department of Electrical and Electronics Engineering, 
+          NIT Trichy. Each edition explores emerging technologies and developments such as Olympic Engineering, Industry 4.0, Smart Grids and much more.
+          It encompasses a broad range of well researched articles that are sure to enlighten readers. 
+          In addition, these magazines highlight the remarkable accomplishments of the faculty and students in our department. 
+          Tronicals will also give you an insight into the activities undertaken by the EEE Association over the years. 
+          To make your reading experience more enjoyable we have included exciting puzzles and crosswords! Do check out our previous editions below.
           </p>
           <FadeIn delay="1000" transitionDuration="1000">
           <Tabs items={Items} showInkBar={true}/>

@@ -10,7 +10,8 @@ import FadeIn from 'react-fade-in';
 const makeStyle = {
   containerDiv: {
     padding: 0,
-    background: '#000'
+    backgroundImage: `url('/assets/img/Plain bg website.png')`,
+    backgroundSize: 'contain',
   },
   wrapperDiv: {
     padding: 100, 
@@ -74,8 +75,10 @@ class Team extends Component {
           <h2 className="h1-responsive font-weight-bold my-5">
               Our amazing team
           </h2>
-          <p className="grey-text w-responsive mx-auto mb-5">
-            Currents team strives to be the best of the best.
+          <p className="grey-text w-responsive mx-auto mb-5 text-xl">
+          With the perfect mix of skills, what our versatile team has achieved so far has been the sum of efforts from its every passionate individual. 
+          Driven by a common goal, we strive to ideate, innovate and bring to you the best of the content, events and workshops out there. 
+          Meet the faces that are working out and about to deliver you with yet other invaluable and engaging experiences!
           </p>
           <Grid stackable centered columns="4">{ columns }</Grid>
         </div>

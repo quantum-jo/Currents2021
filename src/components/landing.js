@@ -60,21 +60,21 @@ handleSubmit( event ) {
       <div className="vertical-wire-1"></div>
       <VFXImg
       src="/assets/img/amplifier.png"
-      shader="shine" className="hanging1" alt="/assets/img/amplifier.png"/>
+      shader="rgbGlitch" className="hanging1" alt="/assets/img/amplifier.png"/>
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-2"></div>
       <VFXImg
       src="/assets/img/battery.png"
-      shader="shine" className="hanging2" alt="/assets/img/amplifier.png"/>
+      shader="rgbGlitch" className="hanging2" alt="/assets/img/amplifier.png"/>
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-3"></div>
-      <VFXImg src="/assets/img/capacitor.png" shader="sinewave" className="hanging3" alt="/assets/img/capacitor.png" />
+      <VFXImg src="/assets/img/capacitor.png" shader="rgbGlitch" className="hanging3" alt="/assets/img/capacitor.png" />
     </div>
     <div className="asset-wrapper">
         <div className="vertical-wire-4"></div> 
-        <VFXImg src="/assets/img/led.png" shader='blink' className="hanging4" alt="/assets/img/led.png" />
+        <VFXImg src="/assets/img/led.png" shader='rgbGlitch' className="hanging4" alt="/assets/img/led.png" />
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-5"></div>
@@ -82,15 +82,15 @@ handleSubmit( event ) {
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-6"></div>
-      <VFXImg src="/assets/img/oscilloscope.png" shader='pixelate' className="hanging6" alt="/assets/img/oscilloscope.png" />
+      <VFXImg src="/assets/img/oscilloscope.png" shader='rgbGlitch' className="hanging6" alt="/assets/img/oscilloscope.png" />
     </div>
     <div className="asset-wrapper-7">
       <div className="vertical-wire-7"></div>
-      <VFXImg src="/assets/img/plug.png" shader="rgbShift" className="hanging7" alt="/assets/img/plug.png" />
+      <VFXImg src="/assets/img/plug.png" shader="rgbGlitch" className="hanging7" alt="/assets/img/plug.png" />
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-8"></div>
-      <VFXImg src="/assets/img/resistor.png" shader="spring" className="hanging8" alt="/assets/img/resistor.png" />
+      <VFXImg src="/assets/img/resistor.png" shader="rgbGlitch" className="hanging8" alt="/assets/img/resistor.png" />
     </div>
 
   <section className="header relative pt-16 items-center flex h-screen">
@@ -118,19 +118,15 @@ handleSubmit( event ) {
       <section className="relative">
       <div className="flex flex-wrap items-center">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
-                  Working with us is a pleasure
-                </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
-                </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
+              <h3 className="text-3xl text-white font-semibold">About EEE Association</h3>
+                  <p className="mt-4 text-lg leading-relaxed text-white">
+                  The Electrical and Electronics Engineering Association, better known as EEE-A, is the brainchild of the Department of Electrical and Electronics Engineering. 
+                  The department was founded in 1964. It offers one undergraduate programme (B. Tech), two postgraduate programmes (M. Tech) in Power Electronics and Power Systems and also research programmes (M. S. and Ph. D) in various disciplines. 
+                  It is known for its state-of-the-art infrastructure and teaching facilities.
+                  </p>
+                  <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
+                  The EEE-A acts as a bridge between the students and the department. It offers a plethora of activities throughout the year that encourages students to gain in-depth understanding of the field. It has always stood out of the crowd with its diverse set of activities. 
+                  Events and Workshops enable the students to develop the necessary skills for the industry and academia
                 </p>
               </div>
 
@@ -154,12 +150,11 @@ handleSubmit( event ) {
                       ></polygon>
                     </svg>
                     <h4 className="text-xl font-bold text-white">
-                      Top Notch Services
+                     Progressive
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
+                    Keeping up with the changing times, the EEA proceeds to be exemplary even after decades post inception. 
+                    It continues to grow in quality and size, and hopes to keep working to improve its standard.
                     </p>
                   </blockquote>
                 </div>
@@ -178,12 +173,19 @@ handleSubmit( event ) {
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
-                  <h3 className="text-3xl text-white font-semibold">A growing company</h3>
-                  <p className="mt-4 text-lg leading-relaxed text-white">
-                    The extension comes with three pre-built pages to help you
-                    get started faster. You can change the text and images and
-                    you're good to go.
-                  </p>
+                <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
+                 About Currents
+                </h3>
+                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
+                Currents is the annual technical symposium of the Electrical and Electronics Engineering department in NIT, Trichy. 
+                Conducted by the EEEA, it is a three day national level symposium encompassing seminars, technical contests and quizzes, 
+                exhibitions and paper presentations. 
+                </p>
+                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
+                It is regarded as one of the largest technical symposia in South Asia. 
+                The guest lectures in Currents are delivered by professors and technical leads from various institutions. 
+                </p>
+                 
                 </div>
               </div>
             </div>

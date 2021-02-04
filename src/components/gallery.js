@@ -51,9 +51,9 @@ class GallerySet extends Component {
 
     render() { 
         return ( 
-            <div style={{ background: '#151515', padding: 0 }}>
+            <div style={{  backgroundImage: `url('/assets/img/Plain bg website.png')`,
+            backgroundSize:'100% 100%', padding: 0 }}>
             <Navbar />
-            <SideDiv />
             <div style={{ padding: 100, color: '#E18137', textAlign: 'center' }}>
             <FadeIn delay ="500" transitionDuration="1000">
                 <h1>Gallery</h1>

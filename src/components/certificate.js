@@ -9,7 +9,8 @@ import FadeIn from 'react-fade-in';
 const makeStyle = {
     wrapperDiv: {
         padding: 0, 
-        background: '#151515'
+        backgroundImage: `url('/assets/img/Plain bg website.png')`,
+        backgroundSize:'100% 100%',// hsl(210, 50%, 14%)
     }, 
     footerAlign: {
         marginBottom: 200 

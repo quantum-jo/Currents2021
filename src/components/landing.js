@@ -1,6 +1,5 @@
 import {React, Component }from "react";
 import "../assets/styles/landing.css";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar.js";
 
 
@@ -11,8 +10,42 @@ class Landing extends Component {
 }
   render(){
   return (
-<div style={{background:'url(/assets/img/background.png)', 'background-size': 'cover','background-repeat': 'no-repeat'}}>
+<div style={{background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
     <Navbar/>
+
+    <div className="asset-wrapper-1">
+      <div className="vertical-wire-1"></div>
+      <img src="/assets/img/amplifier.png" className="hanging1" alt="/assets/img/amplifier.png" />
+    </div>
+    <div className="asset-wrapper">
+      <div className="vertical-wire-2"></div>
+      <img src="/assets/img/battery.png" className="hanging2" alt="/assets/img/battery.png" />
+    </div>
+    <div className="asset-wrapper">
+      <div className="vertical-wire-3"></div>
+      <img src="/assets/img/capacitor.png" className="hanging3" alt="/assets/img/capacitor.png" />
+    </div>
+    <div className="asset-wrapper">
+        <div className="vertical-wire-4"></div> 
+        <img src="/assets/img/led.png" className="hanging4" alt="/assets/img/led.png" />
+    </div>
+    <div className="asset-wrapper">
+      <div className="vertical-wire-5"></div>
+      <img src="/assets/img/multimeter.png" className="hanging5" alt="/assets/img/multimeter.png" />
+    </div>
+    <div className="asset-wrapper">
+      <div className="vertical-wire-6"></div>
+      <img src="/assets/img/oscilloscope.png" className="hanging6" alt="/assets/img/oscilloscope.png" />
+    </div>
+    <div className="asset-wrapper">
+      <div className="vertical-wire-7"></div>
+      <img src="/assets/img/plug.png" className="hanging7" alt="/assets/img/plug.png" />
+    </div>
+    <div className="asset-wrapper">
+      <div className="vertical-wire-8"></div>
+      <img src="/assets/img/resistor.png" className="hanging8" alt="/assets/img/resistor.png" />
+    </div>
+
   <section className="header relative pt-16 items-center flex h-screen">
   <div  className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75" 
   style={{ position:'absolute',padding:0,margin:0,top:0,left:0,width: '100%',height: '100%'}}>
@@ -20,6 +53,8 @@ class Landing extends Component {
           <div className="flex flex-wrap justify-center">
             <div className="w-full text-center lg:w-8/12">
   <h1 class="logo"><b><span>C</span><span>u</span>rr<span>en</span><span>ts'21</span></b></h1>
+
+
     <div className="sm:block flex flex-col mt-10">
     <a class="a-n2" href="#">
         Neon Button

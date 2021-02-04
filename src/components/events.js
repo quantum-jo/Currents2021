@@ -58,11 +58,10 @@ class events extends Component {
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{ backgroundImage: `url('/assets/img/pic.jpg')`}}
-          >
+            style={{ backgroundImage: `url('/assets/img/Events Common.png')`,backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
             <span
               id="blackOverlay"
-              className="w-full h-full absolute opacity-50 bg-black"
+              className="w-full h-full absolute bg-black" style={{opacity:0.3}}
             ></span>
           </div>
           <div className="container relative mx-auto">

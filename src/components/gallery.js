@@ -49,7 +49,7 @@ class GallerySet extends Component {
 
     render() { 
         return ( 
-            <div style={{ background: '#000', padding: 0 }}>
+            <div style={{ background: '#151515', padding: 0 }}>
             <Navbar />
             <SideDiv />
             <div style={{ padding: 100, color: '#E18137', textAlign: 'center' }}>

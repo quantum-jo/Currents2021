@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 
 @import url(//fonts.googleapis.com/css?family=Vibur);
 .logo {
@@ -168,9 +174,6 @@
   animation: bounce 2s infinite;
 }
 
-.asset-wrapper-1 {
-  max-width: 30%;
-}
 
 .vertical-wire-1 {
   border-left: 6px solid white;
@@ -178,7 +181,7 @@
   position: absolute;
   margin-left: -3px;
   left: 8%;
-  top: 0;
+  top: 0; 
   box-shadow: 5px 5px 30px #FFFF00, -2px -2px 30px #FFFF00;
 }
 
@@ -240,13 +243,13 @@
   margin-left: -3px;
   top: 0;
   filter: drop-shadow(5px 5px 10px rgb(139, 64, 14)) drop-shadow(-5px -5px 10px rgb(139, 64, 14));
-}
+} 
 
 .vertical-wire-8 {
   border-left: 6px solid white;
   height: 75%;
   position: absolute;
-  left: 94%;
+  left: 93vw;
   margin-left: -3px;
   top: 0;
   filter: drop-shadow(5px 5px 10px rgba(117, 21, 243, 0.747)) drop-shadow(-5px -5px 10px rgba(136, 59, 236, 0.637));
@@ -254,80 +257,145 @@
 
 .hanging1 {
   position: absolute;
-  left: 3%;
+  left: 4vw;
   height: 15%;
-  top: 71%;
+  top: 72vh;
   max-width: 50%;
 }
 
 .hanging2 {
   position: absolute;
-  left: 13%;
+  left: 14vw;
   height: 15%;
-  top: 62.5%;
-  max-width: 50%;
+  top: 62.5vh;
+  max-width: 50vw;
 }
 
 .hanging3 {
   position: absolute;
-  left: 20%;
+  left: 21.3vw;
   height: 15%;
-  top: 52%;
+  top: 52.5vh;
   max-width: 50%;
 }
 
 .hanging4 {
   position: absolute;
-  left: 34.7%;
+  left: 35.5vw;
   height: 15%;
-  top: 23.5%;
+  top: 23vh;
   max-width: 50%;
 }
 
 .hanging5 {
   position: absolute;
-  left: 57.5%;
+  left: 57.5vw;
   height: 15%;
-  top: 24.3%;
+  top: 24vh;
   max-width: 50%;
 }
 
 .hanging6 {
   position: absolute;
-  left: 72%;
+  left: 72.5vw;
   height: 15%;
-  top: 54.5%;
+  top: 54vh;
   max-width: 50%;
 }
 
 .hanging7 {
   position: absolute;
-  left: 81%;
+  left: 80.8vw;
   height: 15%;
-  top: 63%;
+  top: 63vh;
   max-width: 50%;
-}
+} 
 
 .hanging8 {
   position: absolute;
-  left: 87%;
+  left: 87.5vw;
   height: 15%;
-  top: 72.8%;
+  top: 72.8vh;
   max-width: 50%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
   [class*="hanging"] {
-    max-width: 15%;
-    max-height: 10%;
-    transform: translate(-20%, 10%);
+    max-width: 10%;
+    max-height: 10%; 
+    transform: translate(1%, 7%);
+  }
+
+  [class*="vertical-wire-"] {
+    transform: translateX(-3%);
   }
 }
 
-@media only screen and (max-width: 1079px) {
+@media only screen and (min-width: 375px) {
   [class*="hanging"] {
-    transform: translateX(-10%);
+    max-width: 10%;
+    max-height: 10%; 
+    transform: translate(5%, 8%);
+  }
+
+  [class*="vertical-wire-"] {
+    transform: translateX(-3%);
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  [class*="hanging"] {
+    max-width: 10%;
+    max-height: 10%; 
+    transform: translate(1%, 10%);
+  }
+
+  [class*="vertical-wire-"] {
+    transform: translateX(-3%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  [class*="hanging"] {
+    transform: translate(-5%, 8%);
     max-width: 15%;
     max-height: 10%; 
   }
+
+  [class*="vertical-wire-"] {
+    transform: translateX(5%);
+  }
 }
+
+@media only screen and (min-width: 1024px) {
+  [class*="hanging"] {
+    transform: translate(7%, 8%);
+    max-width: 15%;
+    max-height: 10%; 
+  }
+
+  [class*="vertical-wire-"] {
+    transform: translateX(-7%);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  [class*="hanging"] {
+    transform: translate(8%, 8%);
+    max-width: 15%;
+    max-height: 10%; 
+  }
+
+  [class*="vertical-wire-"] {
+    transform: translateX(-8%);
+  }
+} 
+
+
+
+
+
+
+
+
+

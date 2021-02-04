@@ -37,7 +37,7 @@ class Landing extends Component {
       <div className="vertical-wire-6"></div>
       <img src="/assets/img/oscilloscope.png" className="hanging6" alt="/assets/img/oscilloscope.png" />
     </div>
-    <div className="asset-wrapper">
+    <div className="asset-wrapper-7">
       <div className="vertical-wire-7"></div>
       <img src="/assets/img/plug.png" className="hanging7" alt="/assets/img/plug.png" />
     </div>

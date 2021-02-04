@@ -2,6 +2,7 @@ import {React, Component }from "react";
 import "../assets/styles/landing.css";
 import Navbar from "./Navbar.js";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 class Landing extends Component {   

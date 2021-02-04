@@ -46,6 +46,9 @@ class profile extends Component {
           console.log(error)
       })
     }
+    componentDidUpdate(){
+      window.scrollTo({ top: 500, behavior: 'smooth' })
+    }
     render(){
       const { name , meta, onClick} = this.props;
       const {eventDetails} =this.state;

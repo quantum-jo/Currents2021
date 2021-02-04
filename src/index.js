@@ -14,6 +14,8 @@ import Gallery from './components/gallery.js';
 import Tronicals from './components/tronicals.js';
 import Certificate from './components/certificate.js';
 import Sr from './components/sr.js';
+import About from './components/about.js';
+import Contact from './components/contact.js';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -26,7 +28,8 @@ ReactDOM.render(
     <Route path="/tronicals" exact component={Tronicals}/>
     <Route path="/certificate" exact component={Certificate} />
     <Route path="/sr" exact component={Sr} />
-
+    <Route path="/about" exact component={About} />
+    <Route path="/contact" exact component={Contact} />
     <Redirect from="*" to="/" />
   </Switch>
 </BrowserRouter>,

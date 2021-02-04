@@ -33,10 +33,11 @@ class events extends Component {
         .catch((error) => {
             console.log(error)
         })
+        
       }
   componentDidMount() {
     this.getEventsData();
-}
+    }
   render(){
     const {selectedEventTitle,isSelected,eventDetails,eventCount} = this.state;
   const columns = _.times(eventCount, (i) => (
@@ -83,20 +84,23 @@ class events extends Component {
         </div>
         { isSelected ? (
           <div
-          className="bg-center bg-black bg-cover"
+          className="bg-center bg-cover" style={{ backgroundImage: `url('/assets/img/Plain bg website.png')`,
+          backgroundSize:'contain'}}
         >
           <section className="pb-20 -mt-24">
           <div className="container mx-auto px-4">
             <FadeIn delay="1000" transitionDuration="1000">
               <Profile onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
+        window.scrollTo({ top: 0, behavior: 'smooth' })
       }} name={selectedEventTitle} meta={m}/> 
       </FadeIn></div>
         </section>
         </div>
       )
       :(
-        <section className="pb-20 bg-black -mt-24">
+        <section className="pb-20 -mt-24" style={{ backgroundImage: `url('/assets/img/Plain bg website.png')`,
+        backgroundSize:'contain'}}>
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
             

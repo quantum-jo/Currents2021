@@ -39,7 +39,8 @@ class Tronicals extends Component {
           title: "Volume "+tronicalDetails[i].volume_no,
           getContent: () => (<Grid centered stackable columns={4}>
             <Grid.Column>
-       <div class="ui card" style={{background:'black'}}>
+       <div class="ui card" style={{background:'black','box-shadow':'rgb(0,0,0) 10px -10px 0px -3px, rgb(254, 80, 161) 10px -10px , rgb(254, 80, 161,0.5) 0px 0px 44px 3px ',
+      'outline': 'rgb(255,20,147) solid 2px'}}>
        <div>
          <img src={tronicalDetails[i].issue_1_img} class="visible content"/>
        </div>
@@ -62,7 +63,8 @@ class Tronicals extends Component {
      </div>
      </Grid.Column>
      <Grid.Column>
-     <div class="ui card" style={{background:'black'}}>
+     <div class="ui card" style={{background:'black','box-shadow':'rgb(0,0,0) 10px -10px 0px -3px, rgb(254, 80, 161) 10px -10px , rgb(254, 80, 161,0.5) 0px 0px 44px 3px ',
+      'outline': 'rgb(255,20,147) solid 2px'}}>
        <div>
          <img src={tronicalDetails[i].issue_1_img} class="visible content"/>
        </div>

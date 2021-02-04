@@ -55,7 +55,7 @@ body {
     text-shadow: inherit;
   }
 }
-.a-n2,.a-n1{ margin-left: 20px;
+.a-n2,.a-n1{
   text-decoration: none; position: relative;  padding: 15px 30px; overflow: hidden; transition: 0.2s all;  color: #fff; text-transform: uppercase; letter-spacing: 4px;
 }
 .a-n1:hover{

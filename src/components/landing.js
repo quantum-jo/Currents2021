@@ -98,7 +98,7 @@ handleSubmit( event ) {
   <div className="container mx-auto">
           <div className="flex flex-wrap justify-center">
             <div className="w-full text-center lg:w-8/12">
-  <h1 class="logo"><b><span>C</span><span>u</span>rr<span>en</span><span>ts'21</span></b></h1>
+  <h1 className="logo"><b><span>C</span><span>u</span>rr<span>en</span><span>ts'21</span></b></h1>
 
 
     <div className="sm:block flex flex-col mt-10">
@@ -109,8 +109,8 @@ handleSubmit( event ) {
     </div>
     </div>
     </div>
-    <div class="encircle bounce animated">
-  <div class="arrow">
+    <div className="encircle bounce animated">
+  <div className="arrow">
   </div>
 </div>
       </section>
@@ -196,7 +196,7 @@ handleSubmit( event ) {
               <div className="w-full lg:w-6/12 px-4">
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-black"
-                style={{'box-shadow':'rgb(0,0,0) 10px -10px 0px -3px, rgb(254, 80, 161) 10px -10px , rgb(254, 80, 161,0.5) 0px 0px 44px 3px ',
+                style={{boxShadow:'rgb(0,0,0) 10px -10px 0px -3px, rgb(254, 80, 161) 10px -10px , rgb(254, 80, 161,0.5) 0px 0px 44px 3px ',
                 'outline': 'rgb(255,20,147) solid 2px'}}>
                   <div className="flex-auto p-5 lg:p-10">
                     <h4 className="text-2xl text-white font-semibold">

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Gallery from 'react-photo-gallery';
 import ResponsiveGallery from 'react-responsive-gallery';
 import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
-import SideDiv from './sideDiv';
 
 // const testPhotos = [
 //     {
@@ -42,7 +40,6 @@ class GallerySet extends Component {
         this.setState({
                 photos: temp
             });
-            console.log(this.state.photos)
     }
 
     componentDidMount = () => {

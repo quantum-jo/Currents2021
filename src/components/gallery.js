@@ -4,8 +4,19 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
-import LoadingOverlay from 'react-loading-overlay';
-import BounceLoader from 'react-spinners/SyncLoader';
+
+// const testPhotos = [
+//     {
+//         src: '/assets/img/pic.jpg',
+//         width: 4,
+//         height: 4
+//     },
+//     {
+//         src: '/assets/img/pic.jpg',
+//         width: 4,
+//         height: 4
+//     }
+// ];
 
 class GallerySet extends Component {
     state = { 
@@ -30,7 +41,6 @@ class GallerySet extends Component {
         this.setState({
                 photos: temp,isLoading:false
             });
-            console.log(this.state.photos)
     }
 
     componentDidMount = () => {

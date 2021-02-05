@@ -1,8 +1,8 @@
-import {React,Component} from "react";
+import { React, Component } from "react";
 import axios from 'axios';
-import {Icon} from 'semantic-ui-react';
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import { Icon } from 'semantic-ui-react';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 class profile extends Component {
     constructor(props) {

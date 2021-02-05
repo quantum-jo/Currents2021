@@ -7,11 +7,13 @@ import FadeIn from 'react-fade-in';
 import Footer from './footer';
 import axios from 'axios';
 import _ from 'lodash';
-import SideDiv from './sideDiv';
+import LoadingOverlay from 'react-loading-overlay'
+import BounceLoader from 'react-spinners/SyncLoader'
 
 class Tronicals extends Component {
     state = { 
-      tronicalDetails:""
+      tronicalDetails:"",
+      isLoading:true,
 
      }
      getTronicalsData() {
@@ -21,6 +23,7 @@ class Tronicals extends Component {
               const data = res.data
               this.setState({
                 tronicalDetails:data,
+                isLoading:false
               })
           })
           .catch((error) => {
@@ -92,6 +95,10 @@ class Tronicals extends Component {
       ;
         return (  
             <>
+            <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<BounceLoader color="red" />}
+    >
                 <div style={{backgroundImage: `url('/assets/img/Plain bg website.png')`,backgroundSize: 'contain', padding: 0 }}>
         <Navbar path='tronicals'/>
         
@@ -113,6 +120,7 @@ class Tronicals extends Component {
           </div>
         <Footer />
       </div>
+      </LoadingOverlay>
             </>
         );
     }

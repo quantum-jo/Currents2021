@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
-import Gallery from 'react-photo-gallery';
 import ResponsiveGallery from 'react-responsive-gallery';
 import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
-import SideDiv from './sideDiv';
-
-// const testPhotos = [
-//     {
-//         src: '/assets/img/pic.jpg',
-//         width: 4,
-//         height: 4
-//     },
-//     {
-//         src: '/assets/img/pic.jpg',
-//         width: 4,
-//         height: 4
-//     }
-// ];
+import LoadingOverlay from 'react-loading-overlay';
+import BounceLoader from 'react-spinners/SyncLoader';
 
 class GallerySet extends Component {
     state = { 
         photos: [],
+        isLoading:true
      }
 
     getPhotos = async () => {
@@ -40,7 +28,7 @@ class GallerySet extends Component {
             console.log(err);
         }
         this.setState({
-                photos: temp
+                photos: temp,isLoading:false
             });
             console.log(this.state.photos)
     }
@@ -51,6 +39,10 @@ class GallerySet extends Component {
 
     render() { 
         return ( 
+            <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<BounceLoader color="red"/>}
+    >
             <div style={{  backgroundImage: `url('/assets/img/Plain bg website.png')`,
             backgroundSize:'100% 100%', padding: 0 }}>
             <Navbar />
@@ -63,6 +55,7 @@ class GallerySet extends Component {
             </div>
             <Footer />
             </div>
+            </LoadingOverlay>
          );
     }
 }

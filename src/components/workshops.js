@@ -6,8 +6,9 @@ import Profile from "./profile.js";
 import { Grid } from 'semantic-ui-react'
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
-import _ from 'lodash'
-const m="Workshop"
+import _ from 'lodash';
+import LoadingOverlay from 'react-loading-overlay'
+import BounceLoader from 'react-spinners/SyncLoader'
 class workshops extends Component {
   constructor(props) {
       super(props);
@@ -26,7 +27,8 @@ class workshops extends Component {
             const data = res.data
             this.setState({
               eventDetails:data,
-              eventCount:data.length
+              eventCount:data.length,
+              isLoading:false
             })
         })
         .catch((error) => {
@@ -41,7 +43,7 @@ class workshops extends Component {
   const columns = _.times(eventCount, (i) => (
     <Grid.Column key={i}>
       <FadeIn delay="500" transitionDuration="1000">
-      <Card title={eventDetails[i].title} prize={eventDetails[i].members_no} description={eventDetails[i].desc} meta={m} 
+      <Card title={eventDetails[i].title} prize={eventDetails[i].members_no} description={eventDetails[i].desc} meta="Workshop" 
       img ={eventDetails[i].img} date={eventDetails[i].date}
       onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
@@ -52,6 +54,10 @@ class workshops extends Component {
   )) 
   return (
   <>
+   <LoadingOverlay
+      active={isLoading}
+      spinner={<BounceLoader color="red" />}
+    >
     <Navbar path="workshops" />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
@@ -89,7 +95,7 @@ class workshops extends Component {
               <Profile onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
         window.scrollTo({ top: 0, behavior: 'smooth' })
-      }} name={selectedEventTitle} meta={m}/></FadeIn> </div>
+      }} name={selectedEventTitle} meta="Workshop"/></FadeIn> </div>
         </section>
       )
       :(
@@ -106,6 +112,7 @@ class workshops extends Component {
       )}
       <Footer/>
           </main>
+          </LoadingOverlay>
     </>
   );
 }

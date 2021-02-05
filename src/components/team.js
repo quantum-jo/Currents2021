@@ -6,6 +6,8 @@ import { MDBCol, MDBIcon } from "mdbreact";
 import axios from 'axios';
 import _ from 'lodash';
 import FadeIn from 'react-fade-in';
+import LoadingOverlay from 'react-loading-overlay';
+import BounceLoader from 'react-spinners/SyncLoader';
 
 const makeStyle = {
   containerDiv: {
@@ -26,7 +28,8 @@ const makeStyle = {
 class Team extends Component {
   state = { 
     membersData: [],
-    memCount:0
+    memCount:0,
+    isLoading:true
    }
   
   getTeamData = async () => {
@@ -38,7 +41,7 @@ class Team extends Component {
     }
 
     this.setState({
-        membersData: data
+        membersData: data,isLoading:false
     });
 
   }
@@ -68,6 +71,10 @@ class Team extends Component {
       </Grid.Column>
     ));
     return ( 
+      <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<BounceLoader color="red"/>}
+    >
       <div style={ makeStyle.containerDiv }>
         <Navbar path='team'/>
         
@@ -84,6 +91,7 @@ class Team extends Component {
         </div>
         <Footer />
       </div>
+      </LoadingOverlay>
      );
   }
 }

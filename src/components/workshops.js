@@ -82,16 +82,19 @@ class workshops extends Component {
           </div>
         </div>
         { isSelected ? (
-          <section className="pb-20 bg-black -mt-24">
+          <section className="pb-20 bg-black -mt-24" style={{ backgroundImage: `url('/assets/img/Plain bg website.png')`,
+          backgroundSize:'contain'}}>
           <div className="container mx-auto px-4">
             <FadeIn delay="1000" transitionDuration="1000">
               <Profile onClick={() => {
         this.setState({isSelected:!this.state.isSelected});
+        window.scrollTo({ top: 0, behavior: 'smooth' })
       }} name={selectedEventTitle} meta={m}/></FadeIn> </div>
         </section>
       )
       :(
-        <section className="pb-20 bg-black -mt-24">
+        <section className="pb-20 bg-black -mt-24" style={{ backgroundImage: `url('/assets/img/Plain bg website.png')`,
+        backgroundSize:'contain'}}>
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
              <Grid stackable centered columns="3">

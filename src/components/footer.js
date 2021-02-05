@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -42,35 +43,26 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation?ref=nr-footer"
-                      >
+                      <Link to="/about" className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm">
                         About Us
-                      </a>
+                      </Link>
+                    </li>
+                    <li>
+                    <Link to="/contact" className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm">
+                        Contact Us
+                      </Link>
+                    </li>
+                    <li>
+                    <Link to="/team" className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm">
+                        The Team
+                      </Link>
                     </li>
                     <li>
                       <a
                         className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://blog.creative-tim.com?ref=nr-footer"
+                        href="https://www.nitt.edu/home/academics/departments/eee/"  target="_blank"
                       >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.github.com/creativetimofficial?ref=nr-footer"
-                      >
-                        Github
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=nr-footer"
-                      >
-                        Free Products
+                        EEE Department
                       </a>
                     </li>
                   </ul>

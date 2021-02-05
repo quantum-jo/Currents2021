@@ -55,7 +55,6 @@ handleSubmit( event ) {
     <VFXProvider>
 <div style={{background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
     <Navbar/>
-
     <div className="asset-wrapper-1">
       <div className="vertical-wire-1"></div>
       <VFXImg

@@ -7,7 +7,8 @@ import { Grid } from 'semantic-ui-react'
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
 import  _  from 'lodash';
-const m = "Workshop";
+import LoadingOverlay from 'react-loading-overlay'
+import SyncLoader from 'react-spinners/SyncLoader'
 
 const makeStyles = {
   wrapperDiv: { 
@@ -61,11 +62,11 @@ class workshops extends Component {
   }
   
   render() {
-    const {selectedEventTitle, isSelected , eventDetails , eventCount ,isLoading} = this.state;
+    const {selectedEventTitle, isSelected , eventDetails , eventCount} = this.state;
     const columns = _.times(eventCount, (i) => (
       <Grid.Column key={i}>
         <FadeIn delay="500" transitionDuration="1000">
-          <Card title={eventDetails[i].title} prize={eventDetails[i].members_no} description={eventDetails[i].desc} meta={m} 
+          <Card title={eventDetails[i].title} prize={eventDetails[i].members_no} description={eventDetails[i].desc} meta="Workshop"
             img ={eventDetails[i].img} date={eventDetails[i].date}
             onClick={() => {
             this.setState({isSelected:!this.state.isSelected});
@@ -77,6 +78,10 @@ class workshops extends Component {
 
     return (
       <>
+      <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<SyncLoader color='orange' />}
+    >
         <Navbar path="workshops" />
           <main>
             <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
@@ -110,7 +115,7 @@ class workshops extends Component {
                           this.setState({isSelected:!this.state.isSelected});
                           window.scrollTo({ top: 0, behavior: 'smooth' })
                         }} 
-                        name={selectedEventTitle} meta={m}/>
+                        name={selectedEventTitle} meta="Workshop"/>
                     </FadeIn> 
                   </div>
                 </section>
@@ -129,6 +134,7 @@ class workshops extends Component {
             }
           </main>
         <Footer/>
+        </LoadingOverlay>
       </>
     );
   }

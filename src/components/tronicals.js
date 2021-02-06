@@ -7,6 +7,9 @@ import FadeIn from 'react-fade-in';
 import Footer from './footer';
 import axios from 'axios';
 import _ from 'lodash';
+import LoadingOverlay from 'react-loading-overlay'
+import SyncLoader from 'react-spinners/SyncLoader'
+
 
 const makeStyles = {
   cardStyle: {
@@ -48,7 +51,8 @@ const makeStyles = {
 
 class Tronicals extends Component {
   state = { 
-    tronicalDetails: ""
+    tronicalDetails: "",
+    isLoading:true
   }
 
   getTronicalsData() {
@@ -58,6 +62,7 @@ class Tronicals extends Component {
           const data = res.data
           this.setState({
             tronicalDetails:data,
+            isLoading:false
           })
       })
       .catch((error) => {
@@ -127,6 +132,10 @@ class Tronicals extends Component {
     ));
 
     return (  
+      <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<SyncLoader color='orange' />}
+    >
       <div style={ makeStyles.wrapperDiv }>
         <Navbar path='tronicals'/>
 
@@ -148,6 +157,7 @@ class Tronicals extends Component {
 
         <Footer />
       </div>
+      </LoadingOverlay>
     );
   }
 }

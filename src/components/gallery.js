@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
+import LoadingOverlay from 'react-loading-overlay'
+import SyncLoader from 'react-spinners/SyncLoader'
 
 // const testPhotos = [
 //     {
@@ -51,7 +53,7 @@ class GallerySet extends Component {
         return ( 
             <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<BounceLoader color="red"/>}
+      spinner={<SyncLoader color="red"/>}
     >
             <div style={{  backgroundImage: `url('/assets/img/Plain bg website.png')`,
             backgroundSize:'100% 100%', padding: 0 }}>

@@ -8,6 +8,7 @@ import _ from 'lodash';
 
 
 const assetLinks = ["assets/img/amplifier.png", "assets/img/battery.png", "assets/img/capacitor.png", "assets/img/led.png", "assets/img/multimeter.png", "assets/img/oscilloscope.png", "assets/img/plug.png", "assets/img/resistor.png"];
+const shaderTyes = ["shine", "spring", "glitch"];
 
 class Landing extends Component {   
   constructor(props) {
@@ -16,7 +17,7 @@ class Landing extends Component {
       name: '',
       email: '',
       institute:'',
-      message: '',
+      message: ''
     }
 }
 onNameChange(event) {
@@ -33,6 +34,8 @@ onInstituteChange(event) {
 onMessageChange(event) {
   this.setState({message: event.target.value})
 }
+
+
 handleSubmit( event ) {
   event.preventDefault();
   axios({
@@ -54,25 +57,26 @@ handleSubmit( event ) {
   })
 }
   render(){
-  let assetCount = Math.floor(Math.random() * (15) + 8);
+    let assetProp = [];
 
-  let assetProp = [];
-  for (let i = 0; i < assetCount; i++) {
+    for (let i = 0; i < 21; i++) {
+    let wh = Math.floor(Math.random() * 5 + 10);
     assetProp.push({ 
-      classNo: Math.floor(Math.random() * 9),  
-      makeStyles: {
-        top: `${Math.floor(Math.random() * 75)}%`,
-        left: `${Math.floor(Math.random() * 95)}%`,
-        position: 'absolute',
-        width: '15%',
-        height: `${Math.floor(Math.random() * 15 + 10)}%`
-      }
+      choice: Math.floor(Math.random() * 8),  
+      dimensions: {
+        width: `${wh - 5}%`,
+        height: `${wh}%`
+      },
+      shaderType: Math.floor(Math.random() * 3),
+      classNo: `landingAsset${i}`
     });
+    console.log(assetProp[i].choice);
   }
-  
-  let assetList = _.times(assetCount, (i) => (
-    <VFXImg src={assetLinks[assetProp[i].classNo]} style={ assetProp[i].makeStyles }  shader="spring" alt="/assets/img/resistor.png" />
-  ));
+
+
+    let assetList = _.times(21, (i) => (
+    <VFXImg key={i} className={ assetProp[i].classNo } src={assetLinks[assetProp[i].choice]} style={ assetProp[i].dimensions }  shader={ shaderTyes[assetProp[i].shaderType] } alt="Image could not be displayed" />
+    ));
 
   return (
     <VFXProvider>

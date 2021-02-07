@@ -7,7 +7,8 @@ import { Grid } from 'semantic-ui-react';
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
 import _ from 'lodash';
-const m = "Event";
+import LoadingOverlay from 'react-loading-overlay'
+import SyncLoader from 'react-spinners/SyncLoader'
 
 const makeStyles = {
   spanDiv: { 
@@ -47,7 +48,8 @@ class events extends Component {
             const data = res.data
             this.setState({
               eventDetails:data,
-              eventCount:data.length
+              eventCount:data.length,
+              isLoading:false
             })
         })
         .catch((error) => {
@@ -65,7 +67,7 @@ class events extends Component {
     const columns = _.times(eventCount, (i) => (
       <Grid.Column key={i}>
         <FadeIn delay ="500" transitionDuration="1000">
-          <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta={m} 
+          <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta="Event"
             img ={eventDetails[i].img} date={eventDetails[i].date}
             onClick={() => {
               this.setState({isSelected:!this.state.isSelected});
@@ -77,6 +79,10 @@ class events extends Component {
 
     return (
       <>
+      <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<SyncLoader color='green' />}
+    >
         <Navbar path="events" />
         <main>
 
@@ -117,7 +123,7 @@ class events extends Component {
                       this.setState({isSelected:!this.state.isSelected});
                       window.scrollTo({ top: 0, behavior: 'smooth' })
                       }} 
-                      name={selectedEventTitle} meta={m} /> 
+                      name={selectedEventTitle} meta="Event" /> 
                   </FadeIn>
                 </div>
               </section>
@@ -137,6 +143,7 @@ class events extends Component {
       }
       <Footer/>
     </main>
+    </LoadingOverlay>
   </>
   );
   }

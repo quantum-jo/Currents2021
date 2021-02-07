@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
+import LoadingOverlay from 'react-loading-overlay'
+import SyncLoader from 'react-spinners/SyncLoader'
 
 // const testPhotos = [
 //     {
@@ -21,6 +23,7 @@ import FadeIn from 'react-fade-in';
 class GallerySet extends Component {
     state = { 
         photos: [],
+        isLoading:true
      }
 
     getPhotos = async () => {
@@ -38,7 +41,7 @@ class GallerySet extends Component {
             console.log(err);
         }
         this.setState({
-                photos: temp
+                photos: temp,isLoading:false
             });
     }
 
@@ -48,6 +51,10 @@ class GallerySet extends Component {
 
     render() { 
         return ( 
+            <LoadingOverlay
+      active={this.state.isLoading}
+      spinner={<SyncLoader color="red"/>}
+    >
             <div style={{  backgroundImage: `url('/assets/img/Plain bg website.png')`,
             backgroundSize:'100% 100%', padding: 0 }}>
             <Navbar />
@@ -60,6 +67,7 @@ class GallerySet extends Component {
             </div>
             <Footer />
             </div>
+            </LoadingOverlay>
          );
     }
 }

@@ -5,12 +5,14 @@ import axios from 'axios';
 import { Form, Input, Button, Popup, Segment } from 'semantic-ui-react';
 import '../assets/styles/certificate.css';
 import FadeIn from 'react-fade-in';
+import LoadingOverlay from 'react-loading-overlay'
+import BounceLoader from 'react-spinners/SyncLoader'
 
 const makeStyle = {
     wrapperDiv: {
         padding: 0, 
         backgroundImage: `url('/assets/img/Plain bg website.png')`,
-        backgroundSize:'100% 100%',// hsl(210, 50%, 14%)
+        backgroundSize:'100% 100%',
     }, 
     footerAlign: {
         marginBottom: 200 
@@ -51,13 +53,15 @@ class Certificate extends Component {
         certificateType: '',
         position: 0,
         statusCode: 0,
-        msg: ''
+        msg: '',
+        isLoading:false
     }
 
     handleChange = (e) => this.setState({ value: e.target.value });
 
     handleSubmit = async (e) => {
         e.preventDefault();
+        this.setState({isLoading:true});
         let serialNo = this.state.value;
         try {
             let data = (await axios.get(`https://currents-backend.herokuapp.com/certificate?serialNo=${serialNo}`, {})).data;
@@ -68,19 +72,24 @@ class Certificate extends Component {
                 certificateType: data.certificateType,
                 position: data.position,
                 statusCode: 200,
-                msg: ''
+                msg: '',
+                isLoading:false
             });
         } catch(err) {
             this.setState({
                 statusCode: err.response.status,
-                msg: err.response.data
+                msg: err.response.data,
+                
             });
         }
     }
 
     render() { 
         let { value, name, college, certificateType, position, statusCode, msg } = this.state;
-        return ( 
+        return (
+            <LoadingOverlay
+            active={this.state.isLoading}
+            spinner={<BounceLoader color="red"/>}>
             <div style={ makeStyle.wrapperDiv }>
                 <div style={ makeStyle.footerAlign }>
                 <Navbar path='certificate' />
@@ -108,12 +117,10 @@ class Certificate extends Component {
                                                     <Popup content="Click this to verify" trigger={<Button icon="search" className="searchButton" style= {{ marginTop: '2.5%' }} onClick={ this.handleSubmit } />} />
                                                 </Form.Group>
                                             </Form> }
-
-
                 </div>
                 { statusCode === 200 && <FadeIn delay="600" transitionDuration="1000"><div style={ makeStyle.userDisplayDiv }>
                                             <hr />
-                                            <div style={ makeStyle.segmentDiv }>
+                                            <div style={ makeStyle.segmentDiv}>
                                                 <Segment.Group raised style={ makeStyle.segGroup }>
                                                     <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Certificate Number:  </h4>{ value }</Segment>
                                                     <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Name:  </h4>{ name }</Segment>
@@ -122,10 +129,12 @@ class Certificate extends Component {
                                                     {position && <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Position:  </h4>{ position }</Segment> }
                                                 </Segment.Group>
                                             </div>       
-                                        </div> </FadeIn>}
+                                        </div></FadeIn>}
+
                 </div>
                 <Footer />
             </div>
+            </LoadingOverlay>
         );
     }
 }

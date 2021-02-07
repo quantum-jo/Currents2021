@@ -21,11 +21,11 @@ const makeStyles = {
   },
   selectedSection: { 
     backgroundImage: `url('/assets/img/Plain bg website.png')`,
-    backgroundSize:'contain'
+    backgroundSize:'cover'
   },
   notSelectedSection: { 
     backgroundImage: `url('/assets/img/Plain bg website.png')`,
-    backgroundSize:'contain'
+    backgroundSize:'cover'
   }
 };
 
@@ -94,12 +94,12 @@ class workshops extends Component {
                   <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                     <div className="pr-12">
                       <h1 className="text-white font-semibold text-5xl">
-                        Your story starts with us.
+                        WORKSHOPS
                       </h1>
                       <p className="mt-4 text-lg text-gray-300">
-                        This is a simple example of a Landing Page you can build
-                        using Notus React. It features multiple CSS components based
-                        on the Tailwind CSS design system.
+                      Currents’21 brings to you a unique series of workshops planned meticulously to make you adept in latest technologies that govern the field of Electrical and Electronics Engineering. 
+                      From basics to advanced concepts, these workshops will cover it all. 
+                      Our well experienced trainers are sure to give you an enriching learning experience.
                       </p>
                     </div>
                   </div>
@@ -121,15 +121,13 @@ class workshops extends Component {
                 </section>
               )
               :(
-                <section className="pb-20 bg-black -mt-24" style={ makeStyles.notSelectedSection }>
-                  <div className="container mx-auto px-4">
-                    <div className="flex flex-wrap">
-                      <Grid stackable centered columns="3">
-                        {columns}
-                      </Grid>
-                    </div>
-                  </div>
-                </section>
+                <section className="pb-20 -mt-24" style={ makeStyles.notSelectedSection }>
+            <div className="container mx-auto px-4">
+                <Grid stackable centered columns="3">
+                  {columns}
+                </Grid>
+            </div>
+          </section>
               )
             }
           </main>

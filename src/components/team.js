@@ -56,11 +56,8 @@ class Team extends Component {
             <h5 className="font-weight-bold mt-4 mb-3">{ this.state.membersData[i].name }</h5>
             <p className="text-uppercase blue-text">{ this.state.membersData[i].position }</p>
             <ul className="list-unstyled mb-0">
-              <a href={ this.state.membersData[i].facebook } className="p-2 fa-lg">
-                <MDBIcon fab icon="facebook-f" className="blue-text" />
-              </a>
               <a href={ this.state.membersData[i].instagram } className="p-2 fa-lg">
-                <MDBIcon fab icon="instagram" className="blue-text" />
+                <MDBIcon fab icon="linkedin" className="blue-text" />
               </a>
             </ul>
           </MDBCol>

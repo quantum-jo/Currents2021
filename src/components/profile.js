@@ -58,7 +58,7 @@ class profile extends Component {
       <main className="profile-page center">
         <section className="relative block h-500-px">
           <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
+            className="top-0 w-full h-full bg-center bg-cover"
             style={{ backgroundImage: `url(${eventDetails.img})`}}
           >
             <span

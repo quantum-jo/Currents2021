@@ -79,6 +79,7 @@ class Certificate extends Component {
             this.setState({
                 statusCode: err.response.status,
                 msg: err.response.data,
+                isLoading:false
                 
             });
         }

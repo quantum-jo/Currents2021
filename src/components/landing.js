@@ -65,31 +65,31 @@ handleSubmit( event ) {
       <div className="vertical-wire-2"></div>
       <VFXImg
       src="/assets/img/battery.png"
-      shader="rgbGlitch" className="hanging2" alt="/assets/img/amplifier.png"/>
+      shader="spring" className="hanging2" alt="/assets/img/amplifier.png"/>
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-3"></div>
-      <VFXImg src="/assets/img/capacitor.png" shader="rgbGlitch" className="hanging3" alt="/assets/img/capacitor.png" />
+      <VFXImg src="/assets/img/capacitor.png" shader="blink" className="hanging3" alt="/assets/img/capacitor.png" />
     </div>
     <div className="asset-wrapper">
         <div className="vertical-wire-4"></div> 
-        <VFXImg src="/assets/img/led.png" shader='rgbGlitch' className="hanging4" alt="/assets/img/led.png" />
+        <VFXImg src="/assets/img/led.png" shader='rainbow' className="hanging4" alt="/assets/img/led.png" />
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-5"></div>
-      <VFXImg src="/assets/img/multimeter.png" shader="rgbGlitch" className="hanging5" alt="/assets/img/multimeter.png" />
+      <VFXImg src="/assets/img/multimeter.png" shader="glitch" className="hanging5" alt="/assets/img/multimeter.png" />
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-6"></div>
-      <VFXImg src="/assets/img/oscilloscope.png" shader='rgbGlitch' className="hanging6" alt="/assets/img/oscilloscope.png" />
+      <VFXImg src="/assets/img/oscilloscope.png" shader='rgbShift' className="hanging6" alt="/assets/img/oscilloscope.png" />
     </div>
     <div className="asset-wrapper-7">
       <div className="vertical-wire-7"></div>
-      <VFXImg src="/assets/img/plug.png" shader="rgbGlitch" className="hanging7" alt="/assets/img/plug.png" />
+      <VFXImg src="/assets/img/plug.png" shader="pixelate" className="hanging7" alt="/assets/img/plug.png" />
     </div>
     <div className="asset-wrapper">
       <div className="vertical-wire-8"></div>
-      <VFXImg src="/assets/img/resistor.png" shader="rgbGlitch" className="hanging8" alt="/assets/img/resistor.png" />
+      <VFXImg src="/assets/img/resistor.png" shader="shine" className="hanging8" alt="/assets/img/resistor.png" />
     </div>
 
   <section className="header relative pt-16 items-center flex h-screen">

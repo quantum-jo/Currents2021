@@ -101,12 +101,11 @@ class events extends Component {
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-12">
                     <h1 className="text-white font-semibold text-5xl">
-                      Your story starts with us.
+                      EVENTS
                     </h1>
                     <p className="mt-4 text-lg text-gray-300">
-                      This is a simple example of a Landing Page you can build
-                      using Notus React. It features multiple CSS components based
-                      on the Tailwind CSS design system.
+                    Get ready to witness some fun-filled, brain teasing set of events that await you in this edition of Currents. 
+                    Curated with care, we hope to deliver a plethora of avenues where you get to innovate, compete and push one another onward to conquer the challenges that lie ahead.
                     </p>
                   </div>
                 </div>
@@ -132,11 +131,9 @@ class events extends Component {
         :(
           <section className="pb-20 -mt-24" style={ makeStyles.bgCoverDivNotSelected }>
             <div className="container mx-auto px-4">
-              <div className="flex flex-wrap">
                 <Grid stackable centered columns="3">
                   {columns}
                 </Grid>
-              </div>
             </div>
           </section>
         )

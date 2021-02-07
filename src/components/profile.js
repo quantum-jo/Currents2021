@@ -135,7 +135,7 @@ class profile extends Component {
                       <div>
                       <Zoom>
                         <img
-                          alt="that wanaka tree"
+                          alt="poster"
                           src={eventDetails.poster}
                           width="500"
                         />

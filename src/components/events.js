@@ -12,9 +12,9 @@ import SyncLoader from 'react-spinners/SyncLoader'
 
 const makeStyles = {
   spanDiv: { 
-    backgroundImage: `url('/assets/img/Events Common.png')`,
-    backgroundSize: 'cover', 
-    backgroundRepeat: 'no-repeat'
+    backgroundImage: `url('/assets/img/Events.png')`,
+    backgroundRepeat:'no-repeat',
+    backgroundSize:'100% 100%',
   },
   blackOverlaySpan: {
     opacity: 0.3
@@ -97,16 +97,14 @@ class events extends Component {
             </div>
 
             <div className="container relative mx-auto">
-              <div className="items-center flex flex-wrap">
+              <div className="flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-12">
-                    <h1 className="text-white font-semibold text-5xl">
-                      EVENTS
-                    </h1>
-                    <p className="mt-4 text-lg text-gray-300">
-                    Get ready to witness some fun-filled, brain teasing set of events that await you in this edition of Currents. 
-                    Curated with care, we hope to deliver a plethora of avenues where you get to innovate, compete and push one another onward to conquer the challenges that lie ahead.
-                    </p>
+                      <p className="mt-10 text-lg text-gray-300">
+                      Currents’21 brings to you a unique series of workshops planned meticulously to make you adept in latest technologies that govern the field of Electrical and Electronics Engineering. 
+                      From basics to advanced concepts, these workshops will cover it all. 
+                      Our well experienced trainers are sure to give you an enriching learning experience.
+                      </p>
                   </div>
                 </div>
               </div>
@@ -114,7 +112,7 @@ class events extends Component {
           </div>
 
         { isSelected ? (
-            <div className="bg-center bg-cover" style={ makeStyles.bgCoverDiv }>
+            <div className="items-center bg-center bg-cover" style={ makeStyles.bgCoverDiv }>
               <section className="pb-20 -mt-24">
                 <div className="container mx-auto px-4">
                   <FadeIn delay="1000" transitionDuration="1000">
@@ -130,7 +128,7 @@ class events extends Component {
           )
         :(
           <section className="pb-20 -mt-24" style={ makeStyles.bgCoverDivNotSelected }>
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto">
                 <Grid stackable centered columns="3">
                   {columns}
                 </Grid>

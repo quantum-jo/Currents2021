@@ -6,7 +6,7 @@ import axios from 'axios';
 import { VFXProvider, VFXImg } from 'react-vfx';
 import _ from 'lodash';
 
-const assetLinks = ["assets/img/amplifier.png", "assets/img/battery.png", "assets/img/capacitor.png", "assets/img/led.png", "assets/img/multimeter.png", "assets/img/oscilloscope.png", "assets/img/plug.png", "assets/img/resistor.png"];
+const assetLinks = ["assets/img/Landing/amplifier.png", "assets/img/Landing/battery.png", "assets/img/Landing/capacitor.png", "assets/img/Landing/led.png", "assets/img/Landing/multimeter.png", "assets/img/Landing/oscilloscope.png", "assets/img/Landing/plug.png", "assets/img/Landing/resistor.png"];
 const shaderTyes = ["shine", "spring", "glitch"];
 
 class Landing extends Component {   

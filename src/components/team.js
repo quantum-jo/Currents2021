@@ -20,7 +20,7 @@ const makeStyle = {
     color: '#fff', 
     textAlign: 'center', 
     position: 'relative', 
-    filter: 'drop-shadow(10px 10px 100px #EB965E) drop-shadow(-10px -10px 50px #EB965E)'
+    filter: 'drop-shadow(10px 10px 30px #EB965E) drop-shadow(-10px -10px 30px #EB965E)'
   }
 };
 
@@ -58,11 +58,6 @@ class Team extends Component {
             <Image src={ this.state.membersData[i].image } circular size="small" />
             <h5 className="font-weight-bold mt-4 mb-3">{ this.state.membersData[i].name }</h5>
             <p className="text-uppercase blue-text">{ this.state.membersData[i].position }</p>
-            <ul className="list-unstyled mb-0">
-              <a href={ this.state.membersData[i].instagram } className="p-2 fa-lg">
-                <MDBIcon fab icon="linkedin" className="blue-text" />
-              </a>
-            </ul>
           </MDBCol>
         </FadeIn>
       </Grid.Column>

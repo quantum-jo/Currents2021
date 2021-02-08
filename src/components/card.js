@@ -6,8 +6,8 @@ const makeStyles = {
     color:'white'
   },
   cardStyle: {
-    boxShadow: 'rgb(0,0,0) 10px -10px 0px -3px, rgb(254, 80, 161) 10px -10px , rgb(254, 80, 161,0.5) 0px 0px 44px 3px ',
-    outline: 'rgb(255,20,147) solid 2px'
+    boxShadow: 'rgb(0,0,0) 10px -10px 0px -3px, #C724B1 10px -10px , #C724B1 0px 0px 44px 3px ',
+    outline: '#C724B1 solid 2px'
   },
   cardContent: {
     background:'#151515'

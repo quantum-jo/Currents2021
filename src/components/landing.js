@@ -4,7 +4,10 @@ import "../assets/styles/landing.css";
 import Navbar from "./Navbar.js";
 import axios from 'axios';
 import { VFXProvider, VFXImg } from 'react-vfx';
+import _ from 'lodash';
 
+const assetLinks = ["assets/img/amplifier.png", "assets/img/battery.png", "assets/img/capacitor.png", "assets/img/led.png", "assets/img/multimeter.png", "assets/img/oscilloscope.png", "assets/img/plug.png", "assets/img/resistor.png"];
+const shaderTyes = ["shine", "spring", "glitch"];
 
 class Landing extends Component {   
   constructor(props) {
@@ -51,46 +54,32 @@ handleSubmit( event ) {
   })
 }
   render(){
+
+  let assetProp = [];
+
+  for (let i = 0; i < 21; i++) {
+    let wh = Math.floor(Math.random() * 5 + 10);
+    assetProp.push({ 
+      choice: Math.floor(Math.random() * 8),  
+      dimensions: {
+        width: `${wh - 5}%`,
+        height: `${wh}%`
+      },
+      shaderType: Math.floor(Math.random() * 3),
+      classNo: `landingAsset${i}`
+    });
+  }
+
+  let assetList = _.times(21, (i) => (
+    <VFXImg key={i} className={ assetProp[i].classNo } src={assetLinks[assetProp[i].choice]} style={ assetProp[i].dimensions }  shader={ shaderTyes[assetProp[i].shaderType] } alt="Image could not be displayed" />
+  ));
+    
   return (
     <VFXProvider>
-<div style={{background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+    <div style={{background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
     <Navbar/>
-    <div className="asset-wrapper-1">
-      <div className="vertical-wire-1"></div>
-      <VFXImg
-      src="/assets/img/amplifier.png"
-      shader="rgbGlitch" className="hanging1" alt="/assets/img/amplifier.png"/>
-    </div>
-    <div className="asset-wrapper">
-      <div className="vertical-wire-2"></div>
-      <VFXImg
-      src="/assets/img/battery.png"
-      shader="spring" className="hanging2" alt="/assets/img/amplifier.png"/>
-    </div>
-    <div className="asset-wrapper">
-      <div className="vertical-wire-3"></div>
-      <VFXImg src="/assets/img/capacitor.png" shader="blink" className="hanging3" alt="/assets/img/capacitor.png" />
-    </div>
-    <div className="asset-wrapper">
-        <div className="vertical-wire-4"></div> 
-        <VFXImg src="/assets/img/led.png" shader='rainbow' className="hanging4" alt="/assets/img/led.png" />
-    </div>
-    <div className="asset-wrapper">
-      <div className="vertical-wire-5"></div>
-      <VFXImg src="/assets/img/multimeter.png" shader="glitch" className="hanging5" alt="/assets/img/multimeter.png" />
-    </div>
-    <div className="asset-wrapper">
-      <div className="vertical-wire-6"></div>
-      <VFXImg src="/assets/img/oscilloscope.png" shader='rgbShift' className="hanging6" alt="/assets/img/oscilloscope.png" />
-    </div>
-    <div className="asset-wrapper-7">
-      <div className="vertical-wire-7"></div>
-      <VFXImg src="/assets/img/plug.png" shader="pixelate" className="hanging7" alt="/assets/img/plug.png" />
-    </div>
-    <div className="asset-wrapper">
-      <div className="vertical-wire-8"></div>
-      <VFXImg src="/assets/img/resistor.png" shader="shine" className="hanging8" alt="/assets/img/resistor.png" />
-    </div>
+    
+    { assetList }
 
   <section className="header relative pt-16 items-center flex h-screen">
   <div  className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75" 

@@ -12,9 +12,9 @@ import SyncLoader from 'react-spinners/SyncLoader'
 
 const makeStyles = {
   wrapperDiv: { 
-    backgroundImage: `url('/assets/img/Workshop Common.png')`,
+    backgroundImage: `url('/assets/img/Workshops.png')`,
     backgroundSize: 'cover', 
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat:'no-repeat',
   }, 
   blackOverlaySpan: {
     opacity: 0.3
@@ -93,14 +93,6 @@ class workshops extends Component {
                 <div className="items-center flex flex-wrap">
                   <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                     <div className="pr-12">
-                      <h1 className="text-white font-semibold text-5xl">
-                        WORKSHOPS
-                      </h1>
-                      <p className="mt-4 text-lg text-gray-300">
-                      Currents’21 brings to you a unique series of workshops planned meticulously to make you adept in latest technologies that govern the field of Electrical and Electronics Engineering. 
-                      From basics to advanced concepts, these workshops will cover it all. 
-                      Our well experienced trainers are sure to give you an enriching learning experience.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -108,7 +100,7 @@ class workshops extends Component {
             </div>
 
             { isSelected ? (
-                <section className="pb-20 bg-black -mt-24" style={ makeStyles.selectedSection }>
+                <section className="pb-20 -mt-24" style={ makeStyles.selectedSection }>
                   <div className="container mx-auto px-4">
                     <FadeIn delay="1000" transitionDuration="1000">
                       <Profile onClick={() => {

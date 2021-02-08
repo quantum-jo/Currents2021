@@ -13,8 +13,7 @@ import SyncLoader from 'react-spinners/SyncLoader'
 const makeStyles = {
   spanDiv: { 
     backgroundImage: `url('/assets/img/Events.png')`,
-    backgroundRepeat:'no-repeat',
-    backgroundSize:'100% 100%',
+    backgroundSize:'cover',
   },
   blackOverlaySpan: {
     opacity: 0.3
@@ -100,11 +99,6 @@ class events extends Component {
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-12">
-                      <p className="mt-10 text-lg text-gray-300">
-                      Currents’21 brings to you a unique series of workshops planned meticulously to make you adept in latest technologies that govern the field of Electrical and Electronics Engineering. 
-                      From basics to advanced concepts, these workshops will cover it all. 
-                      Our well experienced trainers are sure to give you an enriching learning experience.
-                      </p>
                   </div>
                 </div>
               </div>

@@ -33,6 +33,12 @@ const makeStyle = {
     mainContent: {
         margin: '2%',
         textAlign: 'center'
+    },
+    h1Style: {
+        marginBottom: '1%'
+    },
+    pStyle: {
+        marginTop: '1%'
     }
 };
 
@@ -50,9 +56,9 @@ class Sr extends Component {
                             <section style={ makeStyle.contentSection }>
                                 <Image src='/assets/img/Sr/Ashram.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
-                                    <h1>Malarchi Ashram </h1>
+                                    <h1 style={ makeStyle.h1Style }>Malarchi Ashram </h1>
                                     <hr style={ makeStyle.lines } />
-                                    <p>
+                                    <p style={ makeStyle.pStyle }>
                                         We at the EEE Association want to give back to the world wherever we can. Every year, we visit the renowned Malarchi Ashram and engage in various activities. 
                                         We also donate to the Ashram to help those in need the most. 
                                         The feeling of helping those in need is something that one has to experience in life, as it is an emotion with an intensity unrivaled.
@@ -62,9 +68,9 @@ class Sr extends Component {
                             <section style={ makeStyle.contentSection }> 
                                 <Image src='/assets/img/Sr/Spark.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
-                                    <h1>Spark</h1>
+                                    <h1 style={ makeStyle.h1Style }>Spark</h1>
                                     <hr style={ makeStyle.lines } />
-                                    <p>
+                                    <p style={ makeStyle.pStyle }>
                                         Spark is the social responsibility initiative taken on by the EEE Association. 
                                         This outreach includes visiting orphanages, old age homes and other similar sites, and helping those societies with our skills and abilities. 
                                         We also donate money to these places to help them with any issues regarding funding that they might have.
@@ -75,9 +81,9 @@ class Sr extends Component {
                             <section style={ makeStyle.contentSection }>
                                 <Image src='/assets/img/Sr/Volts.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
-                                    <h1>Volts</h1>
+                                    <h1 style={ makeStyle.h1Style }>Volts</h1>
                                     <hr style={ makeStyle.lines } />
-                                    <p>
+                                    <p style={ makeStyle.pStyle }>
                                         Get ready to grind your brains and acing "Volts", the EEEA initiative of giving mock GATE exams from our college. 
                                         GATE plays a vital role, especially for those looking for higher education after graduation, however, these exams are extremely competitive in nature, testing your ability to manage time, solving through intuition and logic. 
                                         EEEA values this and prepares students to tackle the challenges up ahead.
@@ -87,9 +93,9 @@ class Sr extends Component {
                             <section style={ makeStyle.contentSection }>
                                 <Image src='/assets/img/Sr/Eureka.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
-                                    <h1>Eureka</h1>
+                                    <h1 style={ makeStyle.h1Style }>Eureka</h1>
                                     <hr style={ makeStyle.lines } />
-                                    <p>
+                                    <p style={ makeStyle.pStyle }>
                                         From a young age, students with a budding interest in science and technology should be given a platform to present their own 
                                         hypotheses and showcase their understanding of fundamental concepts. 
                                         In the school science exhibition "Eureka", EEEA encourages kids to explore the practical application of the principles they learn while taking a step back from the perfunctory routine of schoolwork.

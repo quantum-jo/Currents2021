@@ -4,8 +4,24 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
-import LoadingOverlay from 'react-loading-overlay'
-import SyncLoader from 'react-spinners/SyncLoader'
+import LoadingOverlay from 'react-loading-overlay';
+import SyncLoader from 'react-spinners/SyncLoader';
+
+const makeStyles = {
+    wrapperDiv: {  
+        backgroundImage: `url('/assets/img/Plain bg website.png')`,
+        backgroundSize:'contain', 
+        padding: 0 
+    }, 
+    mainDiv: {
+        padding: 100, 
+        color: '#E18137', 
+        textAlign: 'center' 
+    },
+    hrStyle: { 
+        padding: 10 
+    }
+};
 
 // const testPhotos = [
 //     {
@@ -55,14 +71,13 @@ class GallerySet extends Component {
       active={this.state.isLoading}
       spinner={<SyncLoader color="red"/>}
     >
-            <div style={{  backgroundImage: `url('/assets/img/Plain bg website.png')`,
-            backgroundSize:'100% 100%', padding: 0 }}>
+            <div style={ makeStyles.wrapperDiv }>
             <Navbar />
-            <div style={{ padding: 100, color: '#E18137', textAlign: 'center' }}>
+            <div style={ makeStyles.mainDiv }>
             <FadeIn delay ="500" transitionDuration="1000">
                 <h1>Gallery</h1>
                 </FadeIn>
-                <hr style={{ padding: 10 }} />
+                <hr style={ makeStyles.hrStyle } />
                 <ResponsiveGallery images={this.state.photos} useLightBox='true'  />
             </div>
             <Footer />

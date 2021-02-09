@@ -94,34 +94,6 @@ export default function Navbar(props) {
               Gallery          
               </Link>
           </li> }
-           
-              
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/currentsnitt/"
-                >
-                  <i className="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg " />
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.linkedin.com/company/currents-nitt/"
-                >
-                  <i className="lg:text-gray-300 text-gray-500 fab fa-linkedin text-lg leading-lg " />
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.instagram.com/currents_nitt/"
-                >
-                  <i className="lg:text-gray-300 text-gray-500 fab fa-instagram text-lg leading-lg " />
-                </a>
-              </li>
             </ul>
           </div>
         </div>

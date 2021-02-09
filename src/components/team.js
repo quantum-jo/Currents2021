@@ -13,7 +13,7 @@ const makeStyle = {
   containerDiv: {
     padding: 0,
     backgroundImage: `url('/assets/img/Plain bg website.png')`,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
   },
   wrapperDiv: {
     padding: 100, 

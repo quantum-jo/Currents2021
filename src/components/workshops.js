@@ -21,11 +21,11 @@ const makeStyles = {
   },
   selectedSection: { 
     backgroundImage: `url('/assets/img/Plain bg website.png')`,
-    backgroundSize:'cover'
+    backgroundSize:'contain'
   },
   notSelectedSection: { 
     backgroundImage: `url('/assets/img/Plain bg website.png')`,
-    backgroundSize:'cover'
+    backgroundSize:'contain'
   }
 };
 

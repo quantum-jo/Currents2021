@@ -7,7 +7,7 @@ import { VFXProvider, VFXImg } from 'react-vfx';
 import _ from 'lodash';
 
 const assetLinks = ["assets/img/Landing/amplifier.png", "assets/img/Landing/battery.png", "assets/img/Landing/capacitor.png", "assets/img/Landing/led.png", "assets/img/Landing/multimeter.png", "assets/img/Landing/oscilloscope.png", "assets/img/Landing/plug.png", "assets/img/Landing/resistor.png"];
-const shaderTyes = ["shine", "spring", "glitch"];
+const shaderTyes = ["blink"];
 
 class Landing extends Component {   
   constructor(props) {
@@ -58,14 +58,14 @@ handleSubmit( event ) {
   let assetProp = [];
 
   for (let i = 0; i < 21; i++) {
-    let wh = Math.floor(Math.random() * 5 + 10);
+    let wh = Math.floor(Math.random() * 5 + 8);
     assetProp.push({ 
       choice: Math.floor(Math.random() * 8),  
       dimensions: {
         width: `${wh - 5}%`,
         height: `${wh}%`
       },
-      shaderType: Math.floor(Math.random() * 3),
+      shaderType: 0, //Math.floor(Math.random() * 3),
       classNo: `landingAsset${i}`
     });
   }
@@ -118,33 +118,13 @@ handleSubmit( event ) {
                 </p>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-black w-full mb-6 shadow-lg rounded-lg">
                   <img
                     alt="..."
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                    src="/assets/img/Landing/EEEA.jpg"
                     className="w-full align-middle rounded-t-lg"
                   />
-                  <blockquote className="relative p-8 mb-4">
-                    <svg
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block h-95-px -top-94-px"
-                    >
-                      <polygon
-                        points="-30,95 583,95 583,65"
-                        className="text-black fill-current"
-                      ></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">
-                     Progressive
-                    </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                    Keeping up with the changing times, the EEA proceeds to be exemplary even after decades post inception. 
-                    It continues to grow in quality and size, and hopes to keep working to improve its standard.
-                    </p>
-                  </blockquote>
                 </div>
               </div>
             </div>
@@ -152,11 +132,11 @@ handleSubmit( event ) {
         <section className="relative py-20">
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <div className="max-w-full md:w-6/12 ml-auto mr-auto px-4">
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
-                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  src="/assets/img/Landing/Currents.jpg"
                 />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">

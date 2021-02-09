@@ -48,7 +48,7 @@ class Sr extends Component {
                 <div style={ makeStyle.containerDiv } >
                     <FadeIn delay="500" transitionDuration="1000">
                             <section style={ makeStyle.contentSection }>
-                                <Image src='/assets/img/pic.jpg' size='medium' rounded style={ makeStyle.Img } />
+                                <Image src='/assets/img/Sr/Ashram.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
                                     <h1>Malarchi Ashram </h1>
                                     <hr style={ makeStyle.lines } />
@@ -60,7 +60,7 @@ class Sr extends Component {
                                 </div>
                             </section>
                             <section style={ makeStyle.contentSection }> 
-                                <Image src='/assets/img/pic.jpg' size='medium' rounded style={ makeStyle.Img } />
+                                <Image src='/assets/img/Sr/Spark.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
                                     <h1>Spark</h1>
                                     <hr style={ makeStyle.lines } />
@@ -73,7 +73,7 @@ class Sr extends Component {
                                 </div>
                             </section>
                             <section style={ makeStyle.contentSection }>
-                                <Image src='/assets/img/pic.jpg' size='medium' rounded style={ makeStyle.Img } />
+                                <Image src='/assets/img/Sr/Volts.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
                                     <h1>Volts</h1>
                                     <hr style={ makeStyle.lines } />
@@ -85,7 +85,7 @@ class Sr extends Component {
                                 </div>
                             </section>
                             <section style={ makeStyle.contentSection }>
-                                <Image src='/assets/img/pic.jpg' size='medium' rounded style={ makeStyle.Img } />
+                                <Image src='/assets/img/Sr/Eureka.jpg' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
                                     <h1>Eureka</h1>
                                     <hr style={ makeStyle.lines } />

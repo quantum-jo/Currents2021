@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/public/assets/img/events
+/public/assets/img/Members
+/public/assets/img/Sr
+/public/assets/img/Tronicals
+/public/assets/img/workshops

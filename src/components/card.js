@@ -7,7 +7,8 @@ const makeStyles = {
   },
   cardStyle: {
     boxShadow: 'rgb(0,0,0) 10px -10px 0px -3px, #C724B1 10px -10px , #C724B1 0px 0px 44px 3px ',
-    outline: '#C724B1 solid 2px'
+    outline: '#C724B1 solid 2px',
+    margin: 'auto'
   },
   cardContent: {
     background:'#151515'

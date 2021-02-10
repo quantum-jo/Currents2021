@@ -7,8 +7,8 @@ import { Grid } from 'semantic-ui-react';
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
 import _ from 'lodash';
-import LoadingOverlay from 'react-loading-overlay'
-import SyncLoader from 'react-spinners/SyncLoader'
+import LoadingOverlay from 'react-loading-overlay';
+import SyncLoader from 'react-spinners/SyncLoader';
 
 const makeStyles = {
   spanDiv: { 

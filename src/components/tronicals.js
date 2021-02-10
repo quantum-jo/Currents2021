@@ -105,28 +105,31 @@ class Tronicals extends Component {
               </Grid.Column>
             </FadeIn>
 
-            <FadeIn delay="500" transitionDuration="1000">
-              <Grid.Column>
-                <div className="ui card" style={ makeStyles.cardStyle }>
-                  <div>
-                    <img src={ tronicalDetails[i].issue_1_img } className="visible content" alt="/assets/img/pic.jpg" />
-                  </div>
-                  <div className="content" style={ makeStyles.contentDiv }>
-                    <a className="header" style={ makeStyles.headerA } href="/tronicals">Volume { tronicalDetails[i].volume_no }</a>
-                    <div className="meta" style={ makeStyles.metaDiv }>
-                      <span className="date">Issue II</span>
+            { tronicalDetails[i].issue_2_img ? ( 
+                <FadeIn delay="500" transitionDuration="1000">
+                  <Grid.Column>
+                    <div className="ui card" style={ makeStyles.cardStyle }>
+                      <div>
+                        <img src={ tronicalDetails[i].issue_1_img } className="visible content" alt="/assets/img/pic.jpg" />
+                      </div>
+                      <div className="content" style={ makeStyles.contentDiv }>
+                        <a className="header" style={ makeStyles.headerA } href="/tronicals">Volume { tronicalDetails[i].volume_no }</a>
+                        <div className="meta" style={ makeStyles.metaDiv }>
+                          <span className="date">Issue II</span>
+                        </div>
+                      </div>
+                      <div className="extra content" style={ makeStyles.extraContentDiv }>
+                        <a href={ tronicalDetails[i].issue_2_file } download> 
+                          <button className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
+                            Download
+                          </button>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div className="extra content" style={ makeStyles.extraContentDiv }>
-                    <a href={ tronicalDetails[i].issue_2_file } download> 
-                      <button className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
-                        Download
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </Grid.Column>
-            </FadeIn>
+                  </Grid.Column>
+                </FadeIn>
+              ) : <div></div>
+            }
           </Grid> )
       })
     ));

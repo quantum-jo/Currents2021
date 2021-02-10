@@ -60,7 +60,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.nitt.edu/home/academics/departments/eee/"  target="_blank"
+                        href="https://www.nitt.edu/home/academics/departments/eee/"  target="_blank" rel="noreferrer"
                       >
                         EEE Department
                       </a>
@@ -74,7 +74,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-600 font-semibold py-1">
-                 Made with <i class="fas fa-bolt"></i> by Webops, EEE Association
+                 Made with <i className="fas fa-bolt"></i> by Webops, EEE Association
               </div>
             </div>
           </div>

@@ -45,6 +45,10 @@ const makeStyles = {
   }, 
   tabStyle: {
     color: '#000'
+  },
+  imgStyle: {
+    maxHeight: '55vh',
+    width: '100%'
   }
 };
 
@@ -86,7 +90,7 @@ class Tronicals extends Component {
               <Grid.Column>
                 <div className="ui card" style={ makeStyles.cardStyle }>
                   <div>
-                    <img src={ tronicalDetails[i].issue_1_img } className="visible content" alt="/assets/img/pic.jpg" />
+                    <img src={ tronicalDetails[i].issue_1_img } className="visible content" alt="/assets/img/pic.jpg" style={ makeStyles.imgStyle }/>
                   </div>
                   <div className="content" style={ makeStyles.contentDiv }>
                     <a className="header" style={ makeStyles.headerA } href="/tronicals" >Volume { tronicalDetails[i].volume_no }</a>
@@ -110,7 +114,7 @@ class Tronicals extends Component {
                   <Grid.Column>
                     <div className="ui card" style={ makeStyles.cardStyle }>
                       <div>
-                        <img src={ tronicalDetails[i].issue_1_img } className="visible content" alt="/assets/img/pic.jpg" />
+                        <img src={ tronicalDetails[i].issue_2_img } className="visible content" alt="/assets/img/pic.jpg" style={ makeStyles.imgStyle }/>
                       </div>
                       <div className="content" style={ makeStyles.contentDiv }>
                         <a className="header" style={ makeStyles.headerA } href="/tronicals">Volume { tronicalDetails[i].volume_no }</a>

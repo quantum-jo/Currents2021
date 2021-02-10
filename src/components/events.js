@@ -68,9 +68,11 @@ class events extends Component {
         <FadeIn delay ="500" transitionDuration="1000">
           <Card title={eventDetails[i].title} prize={eventDetails[i].prize} description={eventDetails[i].desc} meta="Event"
             img ={eventDetails[i].img} date={eventDetails[i].date}
-            onClick={() => {
+            onClick={() => { if(eventDetails[i].date==='COMING SOON')
+                     console.log();
+                     else {
               this.setState({isSelected:!this.state.isSelected});
-              this.setState({selectedEventTitle: this.state.eventDetails[i].title});
+              this.setState({selectedEventTitle: this.state.eventDetails[i].title});}
           }}/>
         </FadeIn>
       </Grid.Column>

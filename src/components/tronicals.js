@@ -114,7 +114,7 @@ class Tronicals extends Component {
                   <Grid.Column>
                     <div className="ui card" style={ makeStyles.cardStyle }>
                       <div>
-                        <img src={ tronicalDetails[i].issue_2_img } className="visible content" alt="/assets/img/pic.jpg" style={ makeStyles.imgStyle }/>
+                        <img src={ tronicalDetails[i].issue_2_img } className="visible content" alt="/assets/img/pic.jpg" />
                       </div>
                       <div className="content" style={ makeStyles.contentDiv }>
                         <a className="header" style={ makeStyles.headerA } href="/tronicals">Volume { tronicalDetails[i].volume_no }</a>

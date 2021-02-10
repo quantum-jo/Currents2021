@@ -24,13 +24,18 @@ class card extends Component {
   render() {
     const { title, prize, description, meta, img, date, onClick } = this.props;
     const extra = meta === 'Event'?
-    (
+    (  date === 'COMING SOON' ?
       <a style={ makeStyles.iconA } href="/">
         <Icon name='calendar'/>
           Date: {date} <br/>
         <Icon name='rupee sign'/>
-         Prizes Worth INR {prize}
-      </a>
+         {date}
+      </a>: <a style={ makeStyles.iconA } href="/">
+      <Icon name='calendar'/>
+        Date: {date} <br/>
+      <Icon name='rupee sign'/>
+       Prizes Worth INR {prize}
+    </a>
     ) : ( 
       <a style={ makeStyles.iconA } href="/">
         <Icon name='calendar'/>

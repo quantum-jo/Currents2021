@@ -2,12 +2,13 @@ import {React, Component }from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/landing.css";
 import Navbar from "./Navbar.js";
+import Footer from './footer';
 import axios from 'axios';
 import { VFXProvider, VFXImg } from 'react-vfx';
 import _ from 'lodash';
 
 const assetLinks = ["assets/img/Landing/amplifier.png", "assets/img/Landing/battery.png", "assets/img/Landing/capacitor.png", "assets/img/Landing/led.png", "assets/img/Landing/multimeter.png", "assets/img/Landing/oscilloscope.png", "assets/img/Landing/plug.png", "assets/img/Landing/resistor.png"];
-const shaderTyes = ["blink"];
+const shaderTyes = ["blink","spring","shine"];
 
 class Landing extends Component {   
   constructor(props) {
@@ -65,7 +66,7 @@ handleSubmit( event ) {
         width: `${wh - 5}%`,
         height: `${wh}%`
       },
-      shaderType: 0, //Math.floor(Math.random() * 3),
+      shaderType: Math.floor(Math.random() * 3),
       classNo: `landingAsset${i}`
     });
   }
@@ -248,6 +249,7 @@ handleSubmit( event ) {
             </div>
           </div>
         </section>
+        <Footer/>
         </div>
         </VFXProvider>
   );

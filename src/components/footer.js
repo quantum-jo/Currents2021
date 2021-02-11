@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-gray-800 pt-8 pb-6">
+      <footer className="relative pt-8 pb-6" style={{ background: '#4D4861' }}> { /* #800080 */}
 
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-center lg:text-left">
@@ -73,8 +73,8 @@ export default function Footer() {
           <hr className="my-6 border-gray-400" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-gray-600 font-semibold py-1">
-                 Made with <i className="fas fa-bolt"></i> by Webops, EEE Association
+              <div className="text-sm font-semibold py-1" style={{fontSize: '16px', color: '#fff'}}>
+                 Made with <i className="fas fa-bolt" style={{color: 'yellow'}}></i> by Webops, EEE Association
               </div>
             </div>
           </div>

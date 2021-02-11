@@ -7,7 +7,7 @@ import FadeIn from 'react-fade-in';
 const makeStyle = {
     containerDiv: {
         padding: '10%',
-        color: 'coral',
+        color: '#3d405b',
         backgroundImage: `url('/assets/img/Plain bg website.png')`,
         backgroundSize:'contain',// hsl(210, 50%, 14%)
     },
@@ -16,16 +16,15 @@ const makeStyle = {
         padding: '3%',
         height: 'auto',
         overflow: 'auto',
-        background: 'hsl(210, 50%, 14%)',
+        background: '#698996',
         borderRadius: '10px',
-        filter: 'drop-shadow(5px 5px 10px #ff00ff) drop-shadow(-5px -5px 10px #E41E1E)'
+        filter: 'drop-shadow(5px 5px 10px #145e98)'
     },
     Img: {
         float: 'left',
         margin: '2%',
         height: 'auto',
-        boxShadow:'rgb(0,0,0) 10px -10px 0px -3px, #33FF00 10px -10px', 
-        outline: '#E6FB04 solid 2px'
+        boxShadow:'rgb(0,0,0) 10px -10px 0px -3px, #197278 10px -10px'
     },
     lines: {
         background: '#9DDF27'

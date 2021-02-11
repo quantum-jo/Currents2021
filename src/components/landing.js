@@ -8,7 +8,7 @@ import { VFXProvider, VFXImg } from 'react-vfx';
 import _ from 'lodash';
 
 const assetLinks = ["assets/img/Landing/amplifier.png", "assets/img/Landing/battery.png", "assets/img/Landing/capacitor.png", "assets/img/Landing/led.png", "assets/img/Landing/multimeter.png", "assets/img/Landing/oscilloscope.png", "assets/img/Landing/plug.png", "assets/img/Landing/resistor.png"];
-const shaderTyes = ["blink","spring","shine"];
+const shaderTyes = ["blink"];
 
 class Landing extends Component {   
   constructor(props) {
@@ -66,7 +66,7 @@ handleSubmit( event ) {
         width: `${wh - 5}%`,
         height: `${wh}%`
       },
-      shaderType: Math.floor(Math.random() * 3),
+      shaderType: 0, //Math.floor(Math.random() * 3)
       classNo: `landingAsset${i}`
     });
   }

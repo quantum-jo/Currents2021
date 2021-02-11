@@ -7,8 +7,39 @@ import axios from 'axios';
 import { VFXProvider, VFXImg } from 'react-vfx';
 import _ from 'lodash';
 
+
 const assetLinks = ["assets/img/Landing/amplifier.png", "assets/img/Landing/battery.png", "assets/img/Landing/capacitor.png", "assets/img/Landing/led.png", "assets/img/Landing/multimeter.png", "assets/img/Landing/oscilloscope.png", "assets/img/Landing/plug.png", "assets/img/Landing/resistor.png"];
-const shaderTyes = ["blink"];
+const shaderTyes = [`uniform vec2 resolution; // Resolution of the element
+uniform vec2 offset;     // Position of the element in the screen
+uniform float time;      // Time passed since mount
+uniform sampler2D src;   // Input texture
+
+void main() {
+    // Get UV in the element
+    vec2 uv = (gl_FragCoord.xy - offset) / resolution;
+
+    gl_FragColor = texture2D(src, uv) * (sin(time * 5.) * 0.2 + 0.8);
+}`,`uniform vec2 resolution; // Resolution of the element
+uniform vec2 offset;     // Position of the element in the screen
+uniform float time;      // Time passed since mount
+uniform sampler2D src;   // Input texture
+
+void main() {
+    // Get UV in the element
+    vec2 uv = (gl_FragCoord.xy - offset) / resolution;
+
+    gl_FragColor = texture2D(src, uv) * (sin(time * 3.) * 0.2 + 0.8);
+}`,`uniform vec2 resolution; // Resolution of the element
+uniform vec2 offset;     // Position of the element in the screen
+uniform float time;      // Time passed since mount
+uniform sampler2D src;   // Input texture
+
+void main() {
+    // Get UV in the element
+    vec2 uv = (gl_FragCoord.xy - offset) / resolution;
+
+    gl_FragColor = texture2D(src, uv) * (sin(time * 1.) * 0.2 + 0.8);
+}`];
 
 class Landing extends Component {   
   constructor(props) {
@@ -66,7 +97,7 @@ handleSubmit( event ) {
         width: `${wh - 5}%`,
         height: `${wh}%`
       },
-      shaderType: 0, //Math.floor(Math.random() * 3)
+      shaderType: Math.floor(Math.random() * 3),
       classNo: `landingAsset${i}`
     });
   }

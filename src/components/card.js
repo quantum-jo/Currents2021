@@ -3,9 +3,19 @@ import { Card, Icon, Image } from 'semantic-ui-react';
 
 const makeStyles = {
   iconA: {
-    color:'white'
+    color:'white',
+  },
+  iconAactive: {
+    color:'white',
+    textDecoration:'underline'
   },
   cardStyle: {
+    opacity:0.5,
+    boxShadow: 'rgb(0,0,0) 10px -10px 0px -3px, #C724B1 10px -10px , #C724B1 0px 0px 44px 3px ',
+    outline: '#C724B1 solid 2px',
+    margin: 'auto',
+  },
+  cardStyleActive: {
     boxShadow: 'rgb(0,0,0) 10px -10px 0px -3px, #C724B1 10px -10px , #C724B1 0px 0px 44px 3px ',
     outline: '#C724B1 solid 2px',
     margin: 'auto'
@@ -15,7 +25,7 @@ const makeStyles = {
   },
   cardWhite: {
     color:'white',
-    height: '5vh'
+    height: '8vh'
   }
 };
 
@@ -25,28 +35,26 @@ class card extends Component {
     const { title, prize, description, meta, img, date, onClick } = this.props;
     const extra = meta === 'Event'?
     (  date === 'COMING SOON' ?
-      <a style={ makeStyles.iconA } href="/">
+      <a style={ makeStyles.iconAactive } href="/events">
         <Icon name='calendar'/>
-          Date: {date} <br/>
-        <Icon name='rupee sign'/>
-         {date}
-      </a>: <a style={ makeStyles.iconA } href="/">
+          {date} <br/>
+      </a>: <a style={ makeStyles.iconA } href="/events">
       <Icon name='calendar'/>
-        Date: {date} <br/>
+        {date} <br/>
       <Icon name='rupee sign'/>
        Prizes Worth INR {prize}
     </a>
     ) : ( 
       <a style={ makeStyles.iconA } href="/">
         <Icon name='calendar'/>
-          Date: {date} <br/>
-        <Icon name='user'/>
-         Team of {prize}
+         {date} <br/>
+         <Icon name='rupee sign'/>
+         {prize}
       </a>
     )
 
     return(
-      <Card style={ makeStyles.cardStyle } onClick={onClick} >
+      <Card style={ date==='COMING SOON'? makeStyles.cardStyle:makeStyles.cardStyleActive } onClick={onClick} disabled >
         <Image src={img} />
         <Card.Content style={ makeStyles.cardContent }>
           <Card.Header style={ makeStyles.cardWhite }>{title}</Card.Header>

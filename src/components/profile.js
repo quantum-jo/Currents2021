@@ -67,9 +67,9 @@ class profile extends Component {
             ></span>
           </div>
         </section>
-        <section className="relative py-16 bg-gray-800">
+        <section className="relative py-16" style={{background: '#DC965A'}}>
           <div className="container mx-auto px-4">
-            <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-6 shadow-xl rounded-lg -mt-64">
+            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-xl rounded-lg -mt-64" style={{background: '#151515'}}>
               <div className="px-6">
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">

@@ -18,7 +18,7 @@ void main() {
     // Get UV in the element
     vec2 uv = (gl_FragCoord.xy - offset) / resolution;
 
-    gl_FragColor = texture2D(src, uv) * (sin(time * 5.) * 0.2 + 0.8);
+    gl_FragColor = texture2D(src, uv) * (sin(time * 5.) * 0.2 + 0.9);
 }`,`uniform vec2 resolution; // Resolution of the element
 uniform vec2 offset;     // Position of the element in the screen
 uniform float time;      // Time passed since mount
@@ -28,7 +28,7 @@ void main() {
     // Get UV in the element
     vec2 uv = (gl_FragCoord.xy - offset) / resolution;
 
-    gl_FragColor = texture2D(src, uv) * (sin(time * 3.) * 0.2 + 0.8);
+    gl_FragColor = texture2D(src, uv) * (sin(time * 3.) * 0.2 + 1.0);
 }`,`uniform vec2 resolution; // Resolution of the element
 uniform vec2 offset;     // Position of the element in the screen
 uniform float time;      // Time passed since mount
@@ -38,7 +38,7 @@ void main() {
     // Get UV in the element
     vec2 uv = (gl_FragCoord.xy - offset) / resolution;
 
-    gl_FragColor = texture2D(src, uv) * (sin(time * 1.) * 0.2 + 0.8);
+    gl_FragColor = texture2D(src, uv) * (sin(time * 1.) * 0.2 + 1.2);
 }`];
 
 class Landing extends Component {   

@@ -80,7 +80,7 @@ class workshops extends Component {
       <>
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<SyncLoader color='orange' />}
+      spinner={<SyncLoader color='violet' />}
     >
         <Navbar path="workshops" />
           <main>

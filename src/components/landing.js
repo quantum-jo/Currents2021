@@ -90,12 +90,12 @@ handleSubmit( event ) {
   let assetProp = [];
 
   for (let i = 0; i < 21; i++) {
-    let wh = Math.floor(Math.random() * 5 + 10);
+    let wh = Math.floor(Math.random() * 25 + 10);
     assetProp.push({ 
       choice: Math.floor(Math.random() * 8),  
       dimensions: {
-        width: `${wh - 5}%`,
-        height: `${wh}%`
+        width: `${wh}vh`,
+        height: `${wh}vh`
       },
       shaderType: Math.floor(Math.random() * 3),
       classNo: `landingAsset${i}`
@@ -108,7 +108,7 @@ handleSubmit( event ) {
     
   return (
     <VFXProvider>
-    <div style={{background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+    <div style={{  background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', overflow: 'hidden'}}>
     <Navbar/>
     
     { assetList }

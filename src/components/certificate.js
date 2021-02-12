@@ -18,6 +18,7 @@ const makeStyle = {
         marginBottom: 200 
     }, 
     inputFormStyle: { 
+        position: 'relative',
         padding: '13%', 
         paddingBottom: '0.5%' 
     },
@@ -42,6 +43,14 @@ const makeStyle = {
     }, 
     heading: {
         color: '#FF0099'
+    },
+    popupButton: {
+        maxHeight: '8vh'
+    },
+    headingDiv: {
+        color: '#fff',
+        textAlign: 'center',
+        justify: 'center'
     }
 };
 
@@ -94,11 +103,21 @@ class Certificate extends Component {
             <div style={ makeStyle.wrapperDiv }>
                 <div style={ makeStyle.footerAlign }>
                 <Navbar path='certificate' />
+                <div style={ makeStyle.headingDiv }>
+                    <h2 className="h1-responsive font-weight-bold my-5">
+                        Our amazing team
+                    </h2>
+                    <p className="grey-text w-responsive mx-auto mb-5 text-xl">
+                        With the perfect mix of skills, what our versatile team has achieved so far has been the sum of efforts from its every passionate individual. 
+                        Driven by a common goal, we strive to ideate, innovate and bring to you the best of the content, events and workshops out there. 
+                        Meet the faces that are working out and about to deliver you with yet other invaluable and engaging experiences!
+                    </p>
+                </div>
                 <div>
                    { (statusCode === 0 || statusCode === 200) && <Form style={ makeStyle.inputFormStyle }>
                                                 <Form.Group widths="equal">
                                                     <input className="formField" type="text" placeholder="Enter certificate number" onChange={ this.handleChange } />
-                                                    <Popup content="Click this to verify" trigger={<Button icon="search" onClick={ this.handleSubmit } />} />
+                                                    <Popup content="Click this to verify" trigger={<Button icon="search" style= { makeStyle.popupButton } onClick={ this.handleSubmit } />} />
                                                 </Form.Group>
                                             </Form> }
                     
@@ -107,7 +126,6 @@ class Certificate extends Component {
                                                     <Form.Field 
                                                         id="form-input-control-number-error"
                                                         control={ Input }
-                                                        label="Certificate Number"
                                                         placeholder={ value }
                                                         error={{
                                                             content: msg,
@@ -115,7 +133,7 @@ class Certificate extends Component {
                                                         }}
                                                         onChange={ this.handleChange }
                                                     />
-                                                    <Popup content="Click this to verify" trigger={<Button icon="search" className="searchButton" style= {{ marginTop: '2.5%' }} onClick={ this.handleSubmit } />} />
+                                                    <Popup content="Click this to verify" trigger={<Button icon="search" className="searchButton" style= { makeStyle.popupButton } onClick={ this.handleSubmit } />} />
                                                 </Form.Group>
                                             </Form> }
                 </div>

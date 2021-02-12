@@ -87,22 +87,24 @@ handleSubmit( event ) {
 }
   render(){
 
-  let assetProp = [];
+  let assetProp = [], values = [0, 1, 2, 3, 4, 5, 6, 7];
 
-  for (let i = 0; i < 21; i++) {
-    let wh = Math.floor(Math.random() * 25 + 10);
+  for(let j, x, i = values.length; i; j = parseInt(Math.random() * i), x = values[--i], values[i] = values[j], values[j] = x);
+
+  for (let i = 0; i < 8; i++) {
+    let wh = Math.floor(Math.random() * 25 + 30);
     assetProp.push({ 
-      choice: Math.floor(Math.random() * 8),  
+      choice: i,  
       dimensions: {
         width: `${wh}vh`,
         height: `${wh}vh`
       },
       shaderType: Math.floor(Math.random() * 3),
-      classNo: `landingAsset${i}`
+      classNo: `landingAsset${values[i]}` 
     });
   }
 
-  let assetList = _.times(21, (i) => (
+  let assetList = _.times(8, (i) => (
     <VFXImg key={i} className={ assetProp[i].classNo } src={assetLinks[assetProp[i].choice]} style={ assetProp[i].dimensions }  shader={ shaderTyes[assetProp[i].shaderType] } alt="Image could not be displayed" />
   ));
     
@@ -130,10 +132,11 @@ handleSubmit( event ) {
     </div>
     </div>
     </div>
-    <div className="encircle bounce animated">
-  <div className="arrow">
-  </div>
-</div>
+    <div className="encircle bounce animated" onClick={() => {
+                      window.scrollTo({ top: 600, behavior: 'smooth' })
+                      }} >
+      <div className="arrow"></div>
+    </div>
       </section>
       <section className="relative">
       <div className="flex flex-wrap items-center">

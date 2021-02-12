@@ -141,7 +141,7 @@ class Tronicals extends Component {
     return (  
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<SyncLoader color='orange' />}
+      spinner={<SyncLoader color='violet' />}
     >
       <div style={ makeStyles.wrapperDiv }>
         <Navbar path='tronicals'/>

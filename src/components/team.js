@@ -65,7 +65,7 @@ class Team extends Component {
     return ( 
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<BounceLoader color="red"/>}
+      spinner={<BounceLoader color="violet"/>}
     >
       <div style={ makeStyle.containerDiv }>
         <Navbar path='team'/>

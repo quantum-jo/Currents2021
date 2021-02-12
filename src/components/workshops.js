@@ -66,7 +66,7 @@ class workshops extends Component {
     const columns = _.times(eventCount, (i) => (
       <Grid.Column key={i}>
         <FadeIn delay="500" transitionDuration="1000">
-          <Card title={eventDetails[i].title} prize={eventDetails[i].members_no} description={eventDetails[i].desc} meta="Workshop"
+          <Card title={eventDetails[i].title} prize={eventDetails[i].price} description={eventDetails[i].desc} meta="Workshop"
             img ={eventDetails[i].img} date={eventDetails[i].date}
             onClick={() => {
             this.setState({isSelected:!this.state.isSelected});
@@ -80,7 +80,7 @@ class workshops extends Component {
       <>
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<SyncLoader color='orange' />}
+      spinner={<SyncLoader color='violet' />}
     >
         <Navbar path="workshops" />
           <main>

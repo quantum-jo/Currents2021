@@ -82,7 +82,7 @@ class events extends Component {
       <>
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<SyncLoader color='green' />}
+      spinner={<SyncLoader color='violet' />}
     >
         <Navbar path="events" />
         <main>

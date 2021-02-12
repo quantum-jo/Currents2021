@@ -10,9 +10,16 @@ export default function Navbar(props) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap"
-              to="/"
-            >
-              Currents 2021            
+              to="/">
+               <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+    <div class="h-10 w-10 self-center mr-2">
+      <img class="h-10 w-10 self-center" src="/assets/img/C.png" />
+    </div>
+    <div>
+      <a class="text-white px-3 py-4 lg:py-2 flex items-center text-l">Currents'21</a>
+    </div>
+  </div>           
               </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

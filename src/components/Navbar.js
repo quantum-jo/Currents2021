@@ -11,13 +11,13 @@ export default function Navbar(props) {
             <Link
               className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap"
               to="/">
-               <div class="mb-2 sm:mb-0 flex flex-row
+               <div className="mb-2 sm:mb-0 flex flex-row
   ">
-    <div class="h-10 w-10 self-center mr-2">
-      <img class="h-10 w-10 self-center" src="/assets/img/C.png" />
+    <div className="h-10 w-10 self-center mr-2">
+      <img className="h-10 w-10 self-center" src="/assets/img/C.png" alt="/assets/img/pic.jpg"/>
     </div>
     <div>
-      <a class="text-white px-3 py-4 lg:py-2 flex items-center text-l">Currents'21</a>
+      <a className="text-white px-3 py-4 lg:py-2 flex items-center text-l" href="/events">Currents'21</a>
     </div>
   </div>           
               </Link>

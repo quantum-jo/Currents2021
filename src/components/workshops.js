@@ -7,8 +7,9 @@ import { Grid } from 'semantic-ui-react'
 import FadeIn from 'react-fade-in';
 import axios from 'axios';
 import  _  from 'lodash';
-import LoadingOverlay from 'react-loading-overlay'
-import SyncLoader from 'react-spinners/SyncLoader'
+import LoadingOverlay from 'react-loading-overlay';
+import SyncLoader from 'react-spinners/SyncLoader';
+import { API_BASE_URL } from '../config.js';
 
 const makeStyles = {
   wrapperDiv: { 
@@ -43,7 +44,7 @@ class workshops extends Component {
 
   getEventsData() {
     axios
-        .get(`https://currents-backend.herokuapp.com/workshops`, {})
+        .get(`${API_BASE_URL}/workshops`, {})
         .then(res => {
             const data = res.data
             this.setState({

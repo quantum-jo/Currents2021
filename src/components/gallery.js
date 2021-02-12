@@ -6,6 +6,7 @@ import axios from 'axios';
 import FadeIn from 'react-fade-in';
 import LoadingOverlay from 'react-loading-overlay';
 import SyncLoader from 'react-spinners/SyncLoader';
+import { API_BASE_URL } from '../config.js';
 
 const makeStyles = {
     wrapperDiv: {  
@@ -45,7 +46,7 @@ class GallerySet extends Component {
     getPhotos = async () => {
         let temp = [];
         try {
-            let photosList = (await axios.get(`https://currents-backend.herokuapp.com/gallery`, {})).data;
+            let photosList = (await axios.get(`${API_BASE_URL}/gallery`, {})).data;
             let i = 0;
             photosList.forEach(photo => {
                 const { src, lightboxTitle } = photo;

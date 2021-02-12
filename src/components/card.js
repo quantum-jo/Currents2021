@@ -25,7 +25,7 @@ const makeStyles = {
   },
   cardWhite: {
     color:'white',
-    height: '8vh'
+    height: '4vh'
   }
 };
 

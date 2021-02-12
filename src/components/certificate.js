@@ -5,8 +5,9 @@ import axios from 'axios';
 import { Form, Input, Button, Popup, Segment } from 'semantic-ui-react';
 import '../assets/styles/certificate.css';
 import FadeIn from 'react-fade-in';
-import LoadingOverlay from 'react-loading-overlay'
-import BounceLoader from 'react-spinners/SyncLoader'
+import LoadingOverlay from 'react-loading-overlay';
+import BounceLoader from 'react-spinners/SyncLoader';
+import { API_BASE_URL } from '../config.js';
 
 const makeStyle = {
     wrapperDiv: {
@@ -19,8 +20,10 @@ const makeStyle = {
     }, 
     inputFormStyle: { 
         position: 'relative',
-        padding: '13%', 
-        paddingBottom: '0.5%' 
+        padding: '5%', 
+        paddingBottom: '0.5%',
+        display: 'inline-block',
+        width: '100%'
     },
     errorFormStyle: {
         padding: '13%', paddingBottom: '0.5%'
@@ -45,12 +48,23 @@ const makeStyle = {
         color: '#FF0099'
     },
     popupButton: {
-        maxHeight: '8vh'
+        maxHeight: '8vh',
+        display: 'inline-block'
     },
     headingDiv: {
         color: '#fff',
+        textAlign: 'justify',
+        padding: '10%',
+        paddingBottom: 0
+    },
+    containerDiv: {
+        paddingTop: '5vh',
+        paddingLeft: '2%',
+        paddingRight: '2%'
+    },
+    h2Style: {
         textAlign: 'center',
-        justify: 'center'
+        color: '#39FF14'
     }
 };
 
@@ -73,7 +87,7 @@ class Certificate extends Component {
         this.setState({isLoading:true});
         let serialNo = this.state.value;
         try {
-            let data = (await axios.get(`https://currents-backend.herokuapp.com/certificate?serialNo=${serialNo}`, {})).data;
+            let data = (await axios.get(`${API_BASE_URL}certificate?serialNo=${serialNo}`, {})).data;
             this.setState({
                 value: serialNo,
                 name: data.name,
@@ -99,57 +113,57 @@ class Certificate extends Component {
         return (
             <LoadingOverlay
             active={this.state.isLoading}
-            spinner={<BounceLoader color="red"/>}>
+            spinner={<BounceLoader color='#39FF14'/>}>
             <div style={ makeStyle.wrapperDiv }>
                 <div style={ makeStyle.footerAlign }>
                 <Navbar path='certificate' />
-                <div style={ makeStyle.headingDiv }>
-                    <h2 className="h1-responsive font-weight-bold my-5">
-                        Our amazing team
-                    </h2>
-                    <p className="grey-text w-responsive mx-auto mb-5 text-xl">
-                        With the perfect mix of skills, what our versatile team has achieved so far has been the sum of efforts from its every passionate individual. 
-                        Driven by a common goal, we strive to ideate, innovate and bring to you the best of the content, events and workshops out there. 
-                        Meet the faces that are working out and about to deliver you with yet other invaluable and engaging experiences!
-                    </p>
-                </div>
-                <div>
-                   { (statusCode === 0 || statusCode === 200) && <Form style={ makeStyle.inputFormStyle }>
-                                                <Form.Group widths="equal">
-                                                    <input className="formField" type="text" placeholder="Enter certificate number" onChange={ this.handleChange } />
-                                                    <Popup content="Click this to verify" trigger={<Button icon="search" style= { makeStyle.popupButton } onClick={ this.handleSubmit } />} />
-                                                </Form.Group>
-                                            </Form> }
-                    
-                    { statusCode > 200 && <Form style={ makeStyle.errorFormStyle }>
-                                                <Form.Group widths="equal">
-                                                    <Form.Field 
-                                                        id="form-input-control-number-error"
-                                                        control={ Input }
-                                                        placeholder={ value }
-                                                        error={{
-                                                            content: msg,
-                                                            pointing: 'below'
-                                                        }}
-                                                        onChange={ this.handleChange }
-                                                    />
-                                                    <Popup content="Click this to verify" trigger={<Button icon="search" className="searchButton" style= { makeStyle.popupButton } onClick={ this.handleSubmit } />} />
-                                                </Form.Group>
-                                            </Form> }
-                </div>
-                { statusCode === 200 && <FadeIn delay="600" transitionDuration="1000"><div style={ makeStyle.userDisplayDiv }>
-                                            <hr />
-                                            <div style={ makeStyle.segmentDiv}>
-                                                <Segment.Group raised style={ makeStyle.segGroup }>
-                                                    <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Certificate Number:  </h4>{ value }</Segment>
-                                                    <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Name:  </h4>{ name }</Segment>
-                                                    <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>College:  </h4>{ college }</Segment>
-                                                    <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Certificate Type:  </h4>{ certificateType }</Segment>
-                                                    {position && <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Position:  </h4>{ position }</Segment> }
-                                                </Segment.Group>
-                                            </div>       
-                                        </div></FadeIn>}
+                <div style={ makeStyle.containerDiv }>
+                    <div style={ makeStyle.headingDiv }>
+                        <h2 className="h1-responsive font-weight-bold my-5" style={ makeStyle.h2Style }>
+                            Certificate
+                        </h2>
+                        <p className="grey-text w-responsive mx-auto mb-5 text-xl">
+                            Wish to cross-check if your certificates have been verified? Don’t worry, we have got you covered. Please enter your certificate code in the search box and you’re now just a click away from self-verifying their authenticity. Cheers!
+                        </p>
+                    </div>
+                    <div>
+                    { (statusCode === 0 || statusCode === 200) && <Form style={ makeStyle.inputFormStyle }>
+                                                    <Form.Group widths="equal">
+                                                        <input className="formField" type="text" placeholder="Enter certificate number" onChange={ this.handleChange } />
+                                                        <Popup content="Click this to verify" trigger={<Button icon="search" style= { makeStyle.popupButton } onClick={ this.handleSubmit } />} />
+                                                    </Form.Group>
+                                                </Form> }
+                        
+                        { statusCode > 200 && <Form style={ makeStyle.errorFormStyle }>
+                                                    <Form.Group widths="equal">
+                                                        <Form.Field 
+                                                            id="form-input-control-number-error"
+                                                            control={ Input }
+                                                            placeholder={ value }
+                                                            error={{
+                                                                content: msg,
+                                                                pointing: 'below'
+                                                            }}
+                                                            onChange={ this.handleChange }
+                                                        />
+                                                        <Popup content="Click this to verify" trigger={<Button icon="search" className="searchButton" style= { makeStyle.popupButton } onClick={ this.handleSubmit } />} />
+                                                    </Form.Group>
+                                                </Form> }
+                    </div>
+                    { statusCode === 200 && <FadeIn delay="600" transitionDuration="1000"><div style={ makeStyle.userDisplayDiv }>
+                                                <hr />
+                                                <div style={ makeStyle.segmentDiv}>
+                                                    <Segment.Group raised style={ makeStyle.segGroup }>
+                                                        <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Certificate Number:  </h4>{ value }</Segment>
+                                                        <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Name:  </h4>{ name }</Segment>
+                                                        <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>College:  </h4>{ college }</Segment>
+                                                        <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Certificate Type:  </h4>{ certificateType }</Segment>
+                                                        {position && <Segment vertical style={ makeStyle.segField }><h4 style={makeStyle.heading}>Position:  </h4>{ position }</Segment> }
+                                                    </Segment.Group>
+                                                </div>       
+                                            </div></FadeIn>}
 
+                    </div>
                 </div>
                 <Footer />
             </div>

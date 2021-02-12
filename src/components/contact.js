@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "./Navbar.js";
 import axios from 'axios';
 import Footer from "./footer.js";
+import { API_BASE_URL } from '../config.js';
 
 const makeStyles = {
   wrapperDiv: {
@@ -43,7 +44,7 @@ class contact extends Component {
     event.preventDefault();
     axios({
       method: "POST", 
-      url:"https://currents-backend.herokuapp.com/email", 
+      url:`${API_BASE_URL}/email`, 
       data:  this.state
     }).then((response)=>{
       if (response.data === 'email sent') {

@@ -6,7 +6,7 @@ import Footer from './footer';
 import axios from 'axios';
 import { VFXProvider, VFXImg } from 'react-vfx';
 import _ from 'lodash';
-
+import { API_BASE_URL } from '../config.js';
 
 const assetLinks = ["assets/img/Landing/amplifier.png", "assets/img/Landing/battery.png", "assets/img/Landing/capacitor.png", "assets/img/Landing/led.png", "assets/img/Landing/multimeter.png", "assets/img/Landing/oscilloscope.png", "assets/img/Landing/plug.png", "assets/img/Landing/resistor.png"];
 const shaderTyes = [`uniform vec2 resolution; // Resolution of the element
@@ -69,7 +69,7 @@ handleSubmit( event ) {
   event.preventDefault();
   axios({
     method: "POST", 
-    url:"https://currents-backend.herokuapp.com/email", 
+    url:`${API_BASE_URL}/email`, 
     data:  this.state
   }).then((response)=>{
     if (response.data === 'email sent') {
@@ -90,7 +90,7 @@ handleSubmit( event ) {
   let assetProp = [];
 
   for (let i = 0; i < 21; i++) {
-    let wh = Math.floor(Math.random() * 5 + 8);
+    let wh = Math.floor(Math.random() * 5 + 10);
     assetProp.push({ 
       choice: Math.floor(Math.random() * 8),  
       dimensions: {
@@ -137,7 +137,7 @@ handleSubmit( event ) {
       </section>
       <section className="relative">
       <div className="flex flex-wrap items-center">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto" style={{ textAlign: 'justify' }}>
               <h3 className="text-3xl text-white font-semibold">About EEE Association</h3>
                   <p className="mt-4 text-lg leading-relaxed text-white">
                   The Electrical and Electronics Engineering Association, better known as EEE-A, is the brainchild of the Department of Electrical and Electronics Engineering. 
@@ -171,7 +171,7 @@ handleSubmit( event ) {
                   src="/assets/img/Landing/Currents.jpg"
                 />
               </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4" style={{ textAlign: 'justify' }}>
                 <div className="md:pr-12">
                 <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
                  About Currents

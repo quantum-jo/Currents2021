@@ -37,7 +37,8 @@ const makeStyle = {
         marginBottom: '1%'
     },
     pStyle: {
-        marginTop: '1%'
+        marginTop: '1%',
+        textAlign: 'justify'
     }
 };
 

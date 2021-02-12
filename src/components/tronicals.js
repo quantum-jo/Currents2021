@@ -7,9 +7,9 @@ import FadeIn from 'react-fade-in';
 import Footer from './footer';
 import axios from 'axios';
 import _ from 'lodash';
-import LoadingOverlay from 'react-loading-overlay'
-import SyncLoader from 'react-spinners/SyncLoader'
-
+import LoadingOverlay from 'react-loading-overlay';
+import SyncLoader from 'react-spinners/SyncLoader';
+import { API_BASE_URL } from '../config.js';
 
 const makeStyles = {
   cardStyle: {
@@ -41,7 +41,7 @@ const makeStyles = {
     paddingRight: "5%", 
     paddingTop: "10%",
     paddingBottom: "10%",
-    textAlign: 'center' 
+    textAlign: 'justify' 
   }, 
   tabStyle: {
     color: '#000'
@@ -49,6 +49,10 @@ const makeStyles = {
   imgStyle: {
     maxHeight: '55vh',
     width: '100%'
+  },
+  h2Style: {
+    textAlign: 'center',
+    color: 'yellow'
   }
 };
 
@@ -61,7 +65,7 @@ class Tronicals extends Component {
 
   getTronicalsData() {
     axios
-      .get(`https://currents-backend.herokuapp.com/tronicals`, {})
+      .get(`${API_BASE_URL}/tronicals`, {})
       .then(res => {
           const data = res.data
           this.setState({
@@ -141,13 +145,13 @@ class Tronicals extends Component {
     return (  
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<SyncLoader color='violet' />}
+      spinner={<SyncLoader color='yellow' />}
     >
       <div style={ makeStyles.wrapperDiv }>
         <Navbar path='tronicals'/>
 
         <div style={ makeStyles.mainDiv }>
-          <h2 className="h1-responsive text-white font-weight-bold my-5">Tronicals</h2>
+          <h2 className="h1-responsive text-white font-weight-bold my-5" style={ makeStyles.h2Style }>Tronicals</h2>
           <p className="text-xl	text-white w-responsive mx-auto mb-5">
             Tronicals is the biannual technical magazine of the Department of Electrical and Electronics Engineering, 
             NIT Trichy. Each edition explores emerging technologies and developments such as Olympic Engineering, Industry 4.0, Smart Grids and much more.

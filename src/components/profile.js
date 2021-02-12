@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Icon } from 'semantic-ui-react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import { API_BASE_URL } from '../config.js';
 
 class profile extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class profile extends Component {
     componentDidMount(){
       this.props.meta === 'Event' ?
       axios
-      .get(`https://currents-backend.herokuapp.com/events/`+ this.props.name, {})
+      .get(`${API_BASE_URL}/events/`+ this.props.name, {})
       .then(res => {
           const data = res.data
           if(data.statusCode===404)
@@ -31,7 +32,7 @@ class profile extends Component {
       })
       :
       axios
-      .get(`https://currents-backend.herokuapp.com/workshops/`+ this.props.name, {})
+      .get(`${API_BASE_URL}/workshops/`+ this.props.name, {})
       .then(res => {
           const data = res.data
           if(data.statusCode===404)
@@ -129,7 +130,7 @@ class profile extends Component {
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-lg leading-relaxed text-white">
+                      <p className="mb-4 text-lg leading-relaxed text-white" style={{ textAlign: 'justify' }}>
                        {eventDetails.long_desc}
                       </p>
                       <div>

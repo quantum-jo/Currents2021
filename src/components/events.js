@@ -9,6 +9,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import LoadingOverlay from 'react-loading-overlay';
 import SyncLoader from 'react-spinners/SyncLoader';
+import { API_BASE_URL } from '../config.js';
 
 const makeStyles = {
   spanDiv: { 
@@ -42,7 +43,7 @@ class events extends Component {
 
   getEventsData() {
     axios
-        .get(`https://currents-backend.herokuapp.com/events`, {})
+        .get(`${API_BASE_URL}/events`, {})
         .then(res => {
             const data = res.data
             this.setState({

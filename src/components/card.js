@@ -41,7 +41,6 @@ class card extends Component {
       </a>: <a style={ makeStyles.iconA } href="/events">
       <Icon name='calendar'/>
         {date} <br/>
-      <Icon name='rupee sign'/>
        Prizes Worth INR {prize}
     </a>
     ) : ( 

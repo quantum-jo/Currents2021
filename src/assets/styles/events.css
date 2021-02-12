@@ -1,0 +1,13 @@
+.eventsImageDivContainer {
+    background-image: url('Events.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 426px) {
+    .eventsImageDivContainer {
+        background-image: url('EventsMobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

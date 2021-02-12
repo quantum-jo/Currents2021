@@ -1,0 +1,13 @@
+.workshopsImageDivContainer {
+    background-image: url('Workshops.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 426px) {
+    .workshopsImageDivContainer {
+        background-image: url('WorkshopsMobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

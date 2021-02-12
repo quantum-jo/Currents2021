@@ -44,7 +44,9 @@ const makeStyles = {
     textAlign: 'justify' 
   }, 
   tabStyle: {
-    color: '#000'
+    background: 'rgba(41, 41, 41, 0.8)',
+    border: '2px solid yellow',
+    boxShadow: 'yellow 5px 5px'
   },
   imgStyle: {
     maxHeight: '55vh',
@@ -162,7 +164,9 @@ class Tronicals extends Component {
           </p>
 
           <FadeIn delay="1000" transitionDuration="1000">
-            <Tabs items={Items} showInkBar={true} style={ makeStyles.tabStyle } />
+            <div style={ makeStyles.tabStyle }>
+              <Tabs items={Items} showInkBar={true} />
+            </div>
           </FadeIn>
         </div>
 

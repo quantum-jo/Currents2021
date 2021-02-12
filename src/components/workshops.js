@@ -10,13 +10,9 @@ import  _  from 'lodash';
 import LoadingOverlay from 'react-loading-overlay';
 import SyncLoader from 'react-spinners/SyncLoader';
 import { API_BASE_URL } from '../config.js';
+import '../assets/styles/workshops.css';
 
 const makeStyles = {
-  wrapperDiv: { 
-    backgroundImage: `url('/assets/img/Workshops.png')`,
-    backgroundSize: 'cover', 
-    backgroundRepeat:'no-repeat',
-  }, 
   blackOverlaySpan: {
     opacity: 0.3
   },
@@ -86,7 +82,7 @@ class workshops extends Component {
         <Navbar path="workshops" />
           <main>
             <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
-              <div className="absolute top-0 w-full h-full bg-center bg-cover" style={ makeStyles.wrapperDiv }>
+              <div className="workshopsImageDivContainer absolute top-0 w-full h-full bg-center bg-cover">
                 <span id="blackOverlay" className="w-full h-full absolute bg-black" style={ makeStyles.blackOverlaySpan }></span>
               </div>
               

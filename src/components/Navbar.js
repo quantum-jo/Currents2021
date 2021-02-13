@@ -61,7 +61,7 @@ export default function Navbar(props) {
               className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-l"
               to="/sr"
             >
-              Social Responsibility            
+              SR           
               </Link>
           </li> }
 

@@ -110,7 +110,7 @@ handleSubmit( event ) {
     
   return (
     <VFXProvider>
-    <div style={{  background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', overflow: 'hidden'}}>
+    <div style={{  background:'url(/assets/img/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', overflow: 'auto'}}>
     <Navbar/>
     
     { assetList }
@@ -145,7 +145,7 @@ handleSubmit( event ) {
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
-                  src="/assets/img/Landing/Currents.jpg"
+                  src="/assets/img/Landing/Currents.png"
                 />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4" style={{ textAlign: 'justify' }}>
@@ -180,7 +180,7 @@ handleSubmit( event ) {
                 <div className="relative flex flex-col min-w-0 break-words bg-black w-full mb-6 shadow-lg rounded-lg">
                   <img
                     alt="..."
-                    src="/assets/img/Landing/EEEA.jpg"
+                    src="/assets/img/Landing/EEEA.png"
                     className="w-full align-middle rounded-t-lg"
                   />
                 </div>

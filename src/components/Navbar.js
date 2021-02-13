@@ -8,18 +8,8 @@ export default function Navbar(props) {
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link
-              className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap"
-              to="/">
-               <div className="mb-2 sm:mb-0 flex flex-row
-  ">
-    <div className="h-10 w-10 self-center mr-2">
-      <img className="h-10 w-10 self-center" src="/assets/img/C.png" alt="/assets/img/pic.jpg"/>
-    </div>
-    <div>
-      <a className="text-white px-3 py-4 lg:py-2 flex items-center text-l" href="/events">Currents'21</a>
-    </div>
-  </div>           
+            <Link to="/">
+      <img width='30%' src="/assets/img/Landing/C.png" alt="Logo"/>          
               </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -71,7 +61,7 @@ export default function Navbar(props) {
               className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-l"
               to="/sr"
             >
-              SR            
+              Social Responsibility            
               </Link>
           </li> }
 

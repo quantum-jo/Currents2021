@@ -226,33 +226,37 @@
   }
 
   .landingAsset2 {
-    left: 35%;
+    left: 28%;
     top: 5%;
   }
 
   .landingAsset3 {
-    left: 53%;
+    left: 43%;
     top: 55%;
   }
 
   .landingAsset4 {
-    left: 65%;
-    top: 7%;
+    left: 49%;
+    top: 3%;
   }
 
   .landingAsset5 {
-    left: 59%;
+    left: 49%;
     top: 35%;
   }
 
   .landingAsset6 {
-    left: 10%;
+    left: 8%;
     top: -2%;
   }
 
   .landingAsset7 {
-    left: 24%;
-    top: 60%;
+    left: 4%;
+    top: 67%;
+  }
+
+  .encircle {
+    left: 43%;
   }
 }
 

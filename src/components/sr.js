@@ -11,6 +11,17 @@ const makeStyle = {
         backgroundImage: `url('/assets/img/Plain bg website.png')`,
         backgroundSize:'contain',// hsl(210, 50%, 14%)
     },
+    headingDiv: {
+        color: '#fff',
+        textAlign: 'justify',
+        paddingTop:'3%'
+    },
+    h2Style: {
+        textAlign: 'center',
+        color: 'white',
+        fontSize:'xx-large',
+        textTransform: 'uppercase',
+    },
     contentSection: {
         margin: '5%',
         padding: '3%',
@@ -34,7 +45,7 @@ const makeStyle = {
         textAlign: 'center'
     },
     h1Style: {
-        marginBottom: '1%'
+        marginBottom: '1%',
     },
     pStyle: {
         marginTop: '1%',
@@ -52,6 +63,11 @@ class Sr extends Component {
             <div>
                 <Navbar path='sr' />
                 <div style={ makeStyle.containerDiv } >
+                <div style={ makeStyle.headingDiv }>
+                        <h2 className="h1-responsive my-5" style={ makeStyle.h2Style }>
+                            Social Responsibility Initiatives
+                        </h2>
+                    </div>
                     <FadeIn delay="500" transitionDuration="1000">
                             <section style={ makeStyle.contentSection }>
                                 <Image src='/assets/img/Sr/Ashram.jpg' size='medium' rounded style={ makeStyle.Img } />
@@ -71,10 +87,14 @@ class Sr extends Component {
                                     <h1 style={ makeStyle.h1Style }>Spark</h1>
                                     <hr style={ makeStyle.lines } />
                                     <p style={ makeStyle.pStyle }>
-                                        Spark is the social responsibility initiative taken on by the EEE Association. 
-                                        This outreach includes visiting orphanages, old age homes and other similar sites, and helping those societies with our skills and abilities. 
-                                        We also donate money to these places to help them with any issues regarding funding that they might have.
-                                        We strongly believe in the intense importance of social responsibility in the role it plays in improving the world around us, while also helping us in better ourselves. 
+                                    Spark is the social responsibility initiative taken on by the EEE Association. 
+                                    This outreach includes visiting orphanages, old age homes and other similar sites, 
+                                    and helping those societies with our skills, knowledge and abilities. As part of Spark, 
+                                    school children were given an opportunity to visit the NIT Trichy campus where they received 
+                                    an introduction to engineering. They were taught basic concepts of electronics by an esteemed 
+                                    professor in our department.
+                                     We strongly believe in the intense importance of the role social responsibility plays in 
+                                     improving the world around us, whilst also helping us better ourselves. 
                                     </p>
                                 </div>
                             </section>
@@ -84,9 +104,10 @@ class Sr extends Component {
                                     <h1 style={ makeStyle.h1Style }>Volts</h1>
                                     <hr style={ makeStyle.lines } />
                                     <p style={ makeStyle.pStyle }>
-                                        Get ready to grind your brains and acing "Volts", the EEEA initiative of giving mock GATE exams from our college. 
-                                        GATE plays a vital role, especially for those looking for higher education after graduation, however, these exams are extremely competitive in nature, testing your ability to manage time, solving through intuition and logic. 
-                                        EEEA values this and prepares students to tackle the challenges up ahead.
+                                    Volts is our official outreach program where we connect with students and institutes across southern India. 
+                                    We visit multiple cities and conduct our flagship event - the annual free Mock-GATE examination - in an attempt to help 
+                                    students that are aiming to pursue higher studies in India. GATE being extremely competitive in nature, tests your ability to manage 
+                                    time and solve through intuition and logic. EEE-A understands this and prepares students to tackle the challenges up ahead.
                                     </p>
                                 </div>
                             </section>

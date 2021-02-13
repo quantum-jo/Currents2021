@@ -53,7 +53,7 @@ const makeStyle = {
     },
     headingDiv: {
         color: '#fff',
-        textAlign: 'justify',
+        textAlign: 'center',
         padding: '10%',
         paddingBottom: 0
     },
@@ -123,7 +123,7 @@ class Certificate extends Component {
                             Certificate
                         </h2>
                         <p className="grey-text w-responsive mx-auto mb-5 text-xl">
-                            Wish to cross-check if your certificates have been verified? Don’t worry, we have got you covered. Please enter your certificate code in the search box and you’re now just a click away from self-verifying their authenticity. Cheers!
+                        Please enter your certificate code in the search box to verify their authenticity.
                         </p>
                     </div>
                     <div>

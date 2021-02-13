@@ -22,53 +22,6 @@ class about extends Component {
     return (
       <div style={ makeStyles.wrapperDiv }>
         <Navbar/>
-
-        <section className="relative">
-          <div className="flex flex-wrap items-center">
-            <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-              <h3 className="text-3xl text-white font-semibold">About EEE Association</h3>
-              <p className="mt-4 text-lg leading-relaxed text-white">
-                The Electrical and Electronics Engineering Association, better known as EEE-A, is the brainchild of the Department of Electrical and Electronics Engineering. 
-                The department was founded in 1964. It offers one undergraduate programme (B. Tech), two postgraduate programmes (M. Tech) in Power Electronics and Power Systems and also research programmes (M. S. and Ph. D) in various disciplines. 
-                It is known for its state-of-the-art infrastructure and teaching facilities.
-              </p>
-              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
-                The EEE-A acts as a bridge between the students and the department. It offers a plethora of activities throughout the year that encourages students to gain in-depth understanding of the field. It has always stood out of the crowd with its diverse set of activities. 
-                Events and Workshops enable the students to develop the necessary skills for the industry and academia
-              </p>
-            </div>
-
-            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-              <div className="relative flex flex-col min-w-0 break-words bg-black w-full mb-6 shadow-lg rounded-lg">
-                <img
-                  alt="..."
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
-                  className="w-full align-middle rounded-t-lg"/>
-                
-                <blockquote className="relative p-8 mb-4">
-                  <svg
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 583 95"
-                    className="absolute left-0 w-full block h-95-px -top-94-px">
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      className="text-black fill-current">
-                    </polygon>
-                  </svg>
-
-                  <h4 className="text-xl font-bold text-white">Progressive</h4>
-                  <p className="text-md font-light mt-2 text-white">
-                    Keeping up with the changing times, the EEA proceeds to be exemplary even after decades post inception. 
-                    It continues to grow in quality and size, and hopes to keep working to improve its standard.
-                  </p>
-                </blockquote>
-                
-              </div>
-            </div>
-          </div>
-        </section>
-        
         <section className="relative py-20">
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
@@ -76,7 +29,7 @@ class about extends Component {
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
-                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  src="/assets/img/Landing/Currents.jpg"
                 />
               </div>
 
@@ -97,6 +50,32 @@ class about extends Component {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </section>
+        <section className="relative">
+          <div className="flex flex-wrap items-center">
+            <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <h3 className="text-3xl text-white font-semibold">About EEE Association</h3>
+              <p className="mt-4 text-lg leading-relaxed text-white">
+                The Electrical and Electronics Engineering Association, better known as EEE-A, is the brainchild of the Department of Electrical and Electronics Engineering. 
+                The department was founded in 1964. It offers one undergraduate programme (B. Tech), two postgraduate programmes (M. Tech) in Power Electronics and Power Systems and also research programmes (M. S. and Ph. D) in various disciplines. 
+                It is known for its state-of-the-art infrastructure and teaching facilities.
+              </p>
+              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
+                The EEE-A acts as a bridge between the students and the department. It offers a plethora of activities throughout the year that encourages students to gain in-depth understanding of the field. It has always stood out of the crowd with its diverse set of activities. 
+                Events and Workshops enable the students to develop the necessary skills for the industry and academia
+              </p>
+            </div>
+
+            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div className="relative flex flex-col min-w-0 break-words bg-black w-full mb-6 shadow-lg rounded-lg">
+                <img
+                  alt="..."
+                  src="/assets/img/Landing/EEEA.jpg"
+                  className="w-full align-middle rounded-t-lg"/>
+                
+              </div>
             </div>
           </div>
         </section>

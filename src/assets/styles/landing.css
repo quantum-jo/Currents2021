@@ -1,5 +1,4 @@
 
-
 @import url(//fonts.googleapis.com/css?family=Vibur);
 .logo {
   text-align: center;
@@ -51,7 +50,7 @@
   }
 }
 .a-n2,.a-n1{
-  text-decoration: none; position: relative;  padding: 15px 30px; overflow: hidden; transition: 0.02s all;  color: #fff; text-transform: uppercase; letter-spacing: 4px;
+  text-decoration: none; position: relative; padding: 15px 30px; overflow: hidden; transition: 0.02s all;  color: #fff; text-transform: uppercase; letter-spacing: 4px;
 }
 .a-n1:hover{
   background:#F4D03F; color: #000;

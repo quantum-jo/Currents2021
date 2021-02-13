@@ -85,12 +85,10 @@ class Team extends Component {
         
         <div style={ makeStyle.wrapperDiv }>
           <h2 className="h1-responsive font-weight-bold my-5" style={ makeStyle.h2Style }>
-              Our amazing team
+              Our Amazing Team
           </h2>
           <p className="grey-text w-responsive mx-auto mb-5 text-xl">
-          With the perfect mix of skills, what our versatile team has achieved so far has been the sum of efforts from its every passionate individual. 
-          Driven by a common goal, we strive to ideate, innovate and bring to you the best of the content, events and workshops out there. 
-          Meet the faces that are working out and about to deliver you with yet other invaluable and engaging experiences!
+          Meet the passionate individuals spearheading our endeavours to ideate, innovate and bring you the best. 
           </p>
           <Grid stackable centered columns="4" style={ makeStyle.GridStyle }>{ columns }</Grid>
         </div>

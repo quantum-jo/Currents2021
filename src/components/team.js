@@ -12,7 +12,7 @@ import { API_BASE_URL } from '../config.js';
 
 const makeStyle = {
   containerDiv: {
-    padding: 0,
+    paddingTop: "50px",
     backgroundImage: `url('/assets/img/Plain bg website.png')`,
     backgroundSize: 'contain',
   },
@@ -78,18 +78,11 @@ class Team extends Component {
     return ( 
       <LoadingOverlay
       active={this.state.isLoading}
-      spinner={<BounceLoader color='#EB965E'/>}
-    >
+      spinner={<BounceLoader color='#EB965E'/>}>
       <div style={ makeStyle.containerDiv }>
         <Navbar path='team'/>
         
         <div style={ makeStyle.wrapperDiv }>
-          <h2 className="h1-responsive font-weight-bold my-5" style={ makeStyle.h2Style }>
-              Our Amazing Team
-          </h2>
-          <p className="grey-text w-responsive mx-auto mb-5 text-xl">
-          Meet the passionate individuals spearheading our endeavours to ideate, innovate and bring you the best. 
-          </p>
           <Grid stackable centered columns="4" style={ makeStyle.GridStyle }>{ columns }</Grid>
         </div>
         <Footer />

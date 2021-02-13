@@ -39,7 +39,7 @@ const makeStyles = {
   mainDiv: {
     paddingLeft: "5%",
     paddingRight: "5%", 
-    paddingTop: "10%",
+    paddingTop: "80px",
     paddingBottom: "10%",
     textAlign: 'justify' 
   }, 

@@ -82,15 +82,6 @@ export default function Navbar(props) {
               Certificate           
               </Link>
           </li> }
-
-          {props.path === 'gallery' ? null : <li className="nav-item">
-            <Link
-              className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-l"
-              to="/gallery"
-            >
-              Gallery          
-              </Link>
-          </li> }
             </ul>
           </div>
         </div>

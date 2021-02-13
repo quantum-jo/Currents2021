@@ -91,7 +91,7 @@ class Sr extends Component {
                                 </div>
                             </section>
                             <section style={ makeStyle.contentSection }>
-                                <Image src='/assets/img/Sr/Eureka.jpg' size='medium' rounded style={ makeStyle.Img } />
+                                <Image src='/assets/img/Sr/Eureka.png' size='medium' rounded style={ makeStyle.Img } />
                                 <div style={ makeStyle.mainContent }>
                                     <h1 style={ makeStyle.h1Style }>Eureka</h1>
                                     <hr style={ makeStyle.lines } />

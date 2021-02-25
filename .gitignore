@@ -22,9 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/public/assets/img/events
-/public/assets/img/Members
-/public/assets/img/Sr
-/public/assets/img/Tronicals
-/public/assets/img/workshops
-/public/assets/img/Gallery
+/public/assets
+/src/assets/styles/Events.png
+/src/assets/styles/EventsMobile.png
+/src/assets/styles/Workshops.png
+/src/assets/styles/WorkshopsMobile.png
+
+/src/config.js

@@ -53,7 +53,8 @@ class profile extends Component {
     render(){
       const { name , meta, onClick} = this.props;
       const {eventDetails} =this.state;
-       const extra = meta==='Event'? eventDetails.prize:eventDetails.price
+      const extra = meta==='Event'? eventDetails.prize:eventDetails.price;
+      const button = meta === 'Event' ? "Rulebook" : "More Details";
   return (
     <>
       <main className="profile-page center">
@@ -89,7 +90,7 @@ class profile extends Component {
                         className="bg-blue-500 active:bg-blue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                         type="button"
                       >
-                        {this.props.meta==='Event'? <p>Rulebook</p>:<p>More Details</p>}
+                        {button}
                       </button>
                       </a>
                       <button

@@ -72,7 +72,7 @@ class about extends Component {
               <div className="relative flex flex-col min-w-0 break-words bg-black w-full mb-6 shadow-lg rounded-lg">
                 <img
                   alt="..."
-                  src="/assets/img/Landing/EEEA.jpg"
+                  src="/assets/img/Landing/EEEA.png"
                   className="w-full align-middle rounded-t-lg"/>
                 
               </div>
